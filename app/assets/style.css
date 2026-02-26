@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  /* COLORS */
+  --neutral-900: hsl(0, 0%, 0%);
+  --neutral-100: hsl(0, 0%, 96%);
+  --neutral-50: hsl(0, 0%, 98%);
+
+  --slate-800: hsl(245, 10%, 22%);
+  --slate-400: hsl(243, 10%, 64%);
+  --slate-300: hsl(330, 3%, 84%);
+
+  --indigo-600: hsl(231, 64%, 58%);
+  --indigo-500: hsl(231, 70%, 60%);
+
+  --blue-950: hsl(205, 41%, 21%);
+  --teal-400: hsl(167, 36%, 54%);
+  --skygv-400: hsl(193, 62%, 54%);
+  --linen-50: hsl(9, 100%, 96%);
+  --red-500: hsl(0, 90%, 57%);
+
+  /* FONTS */
+  --fs-1: 50px;
+  --fs-2: 40px;
+  --fs-3: 32px;
+  --fs-4: 16px;
+  --fs-5: 15px;
+  --fs-6: 13px;
+  --fs-7: 12px;
+  --fs-8: 10px;
+
+  /* SPACINGS */
+  --sp-50: 0.5rem;
+  --sp-150: 1.5rem;
+  --sp-200: 2rem;
+  --sp-250: 2.5rem;
+  --sp-300: 3rem;
+  --sp-350: 3.5rem;
+  --sp-400: 4rem;
+  --sp-450: 4.5rem;
+  --sp-500: 5rem;
+
+  /* WEIGHT */
+  --bolder: 900;
+  --bold: 700;
+  --regular: 400;
+  --thin: 300;
+}
+
+* {
+  background-color: var(--neutral-900);
+}
+
+.tp-1 {
+  font-size: var(--fs-1);
+  letter-spacing: -0.45px;
+  line-height: 100%;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: var(--bold);
+}
+.tp-2 {
+  font-size: var(--fs-2);
+  letter-spacing: -0.35px;
+  line-height: 105%;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: var(--bold);
+}
+.tp-3 {
+  font-size: var(--fs-3);
+  letter-spacing: -0.3px;
+  line-height: 130%;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: var(--regular);
+}
+.tp-4 {
+  font-size: var(--fs-4);
+  line-height: 187.5%;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: var(--regular);
+}
+.tp-5 {
+  font-size: var(--fs-5);
+  line-height: 200%;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: var(--regular);
+}
+.tp-6 {
+  font-size: var(--fs-6);
+  line-height: 230%;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: var(--regular);
+}
+.tp-6-bold {
+  font-size: var(--fs-6);
+  line-height: 230%;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: var(--bold);
+}
+.tp-7 {
+  font-size: var(--fs-7);
+  letter-spacing: 2px;
+  line-height: 115%;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: var(--regular);
+}
+.tp-8 {
+  font-size: var(--fs-8);
+  line-height: 120%;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: var(--bold);
+  font-style: italic;
+}
