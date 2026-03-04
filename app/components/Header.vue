@@ -90,10 +90,12 @@ li a {
     right: -100rem;
     top: 7.99rem;
     width: 60%;
-    padding-block: var(--sp-400);
+    padding-block: var(--sp-500);
     z-index: 1000;
     flex-direction: column;
     align-items: center;
+    justify-content: start;
+    height: 70vh;
     padding-left: 0;
     transition: right 0.2s ease-out;
   }

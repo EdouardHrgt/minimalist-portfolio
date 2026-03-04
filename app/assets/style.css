@@ -42,7 +42,10 @@
   --sp-400: 4rem;
   --sp-450: 4.5rem;
   --sp-500: 5rem;
-  --sections-space: 5rem;
+  --sections-space: 9rem;
+
+  /* WIDTH */
+  --mx-width: 1440px;
 
   /* WEIGHT */
   --bolder: 900;
@@ -121,7 +124,7 @@
 }
 .container {
   margin-inline: auto;
-  max-width: 1440px;
+  max-width: var(--mx-width);
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -228,10 +231,14 @@ button {
 @media (max-width: 1024px) {
   :root {
     --fs-1: 40px;
+    --fs-2: 36px;
   }
 }
 
 @media (max-width: 768px) {
+  :root {
+    --sections-space: 6rem;
+  }
   .container {
     padding-inline: var(--sp-100);
   }

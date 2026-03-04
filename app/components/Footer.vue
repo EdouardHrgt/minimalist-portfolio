@@ -91,7 +91,7 @@ svg {
 }
 
 @media (hover: hover) {
- .socials svg:hover {
+  .socials svg:hover {
     fill: var(--teal-400);
   }
   .links li a:hover {
@@ -112,7 +112,7 @@ svg {
   .wrapper {
     display: flex;
     align-items: center;
-    max-width: 1440px;
+    max-width: var(--mx-width);
     padding-inline: 13px 0;
     margin-inline: auto;
   }

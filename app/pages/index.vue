@@ -26,14 +26,15 @@
         <p class="tp-4">
           I’m a junior front-end developer looking for a new role in an exciting company. I focus on
           writing accessible HTML, using modern CSS practices and writing clean JavaScript. When
-          writing JavaScript code, I mostly use Vue, but I can adapt to whatever tools are
-          required. I’m based in Lille, FR, but I’m happy working remotely and have experience in
-          remote teams. When I’m not coding, you’ll find me outdoors. I love being out in nature
-          whether that’s going for a walk or cycling. I’d love you to check out my work.
+          writing JavaScript code, I mostly use Vue, but I can adapt to whatever tools are required.
+          I’m based in Lille, FR, but I’m happy working remotely and have experience in remote
+          teams. When I’m not coding, you’ll find me outdoors. I love being out in nature whether
+          that’s going for a walk or cycling. I’d love you to check out my work.
         </p>
         <Button label="go to portfolio" :primary="false" />
       </div>
     </section>
+    <ContactMe />
   </main>
 </template>
 
@@ -42,10 +43,12 @@
 <style scoped>
 .presentation,
 .about-me {
-  max-width: 1440px;
+  max-width: var(--mx-width);
   margin-inline: auto;
+  margin-bottom: var(--sections-space);
 }
 
+/* PRESENTATION SECTION */
 .presentation {
   background-image: url(/images/homepage/desktop/image-homepage-hero@2x.jpg);
   background-repeat: no-repeat;
@@ -54,25 +57,23 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
-  margin-bottom: var(--sections-space);
 }
 
 .presentation-txt {
   background-color: var(--neutral-0);
   max-width: 475px;
-  padding-top: var(--sp-200);
+  padding-top: var(--sp-250);
 }
 
 h1 {
   display: block;
-  margin-bottom: var(--sp-200);
+  margin-bottom: var(--sp-250);
 }
 
 /* ABOUT ME SECTION */
 .about-me {
   gap: calc(var(--sp-500) * 2);
   display: flex;
-  margin-bottom: var(--sections-space);
 }
 
 .photo {
@@ -92,7 +93,8 @@ h1 {
 
 @media (max-width: 1472px) {
   .presentation,
-  .about-me {
+  .about-me,
+  .contact {
     margin-inline: var(--sp-200);
   }
 }
@@ -101,17 +103,34 @@ h1 {
   .about-me {
     gap: var(--sp-500);
   }
+  .contact {
+    gap: var(--sp-100);
+  }
+  .contact-line {
+    max-width: 300px;
+  }
 }
 
 @media (max-width: 1024px) {
   .presentation {
     background-image: url(/images/homepage/tablet/image-homepage-hero@2x.jpg);
   }
+  .contact-line {
+    max-width: unset;
+    width: 50%;
+  }
+  .about-me {
+    gap: var(--sp-400);
+  }
+  .photo {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
   .presentation,
-  .about-me {
+  .about-me,
+  .contact {
     margin-inline: var(--sp-100);
   }
   .presentation {
@@ -127,8 +146,26 @@ h1 {
   .presentation-txt button {
     margin-inline: auto;
   }
-}
-
-@media (hover: hover) {
+  .contact,
+  .about-me {
+    flex-direction: column;
+  }
+  .contact-line {
+    margin-block: var(--sp-100);
+  }
+  .about-me {
+    align-items: center;
+  }
+  .about-txt {
+    padding-top: 0;
+    padding-block: var(--sp-200);
+  }
+  .contact h3 {
+    text-align: center;
+    max-width: 100%;
+  }
+  .photo img {
+    margin: 0 auto;
+  }
 }
 </style>
