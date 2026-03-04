@@ -1,16 +1,19 @@
 <template>
+  <Transition name="overlay">
+    <div v-if="isOpen" class="overlay" @click="isOpen = false" />
+  </Transition>
   <header class="flex-align container">
     <img src="/images/logo.svg" alt="Logo of the Portfolio" class="logo" />
     <nav>
       <ul class="flex-align-justify" :class="{ active: isOpen }">
         <li>
-          <a href="" class="tp-7">home</a>
+          <NuxtLink to="/" class="tp-7">home</NuxtLink>
         </li>
         <li>
-          <a href="" class="tp-7">portfolio</a>
+          <NuxtLink to="/portfolio" class="tp-7">Portfolio</NuxtLink>
         </li>
         <li>
-          <a href="" class="tp-7">contact me</a>
+          <NuxtLink to="/contact" class="tp-7">contact me</NuxtLink>
         </li>
       </ul>
     </nav>
@@ -33,6 +36,10 @@
 
 <script setup>
 const isOpen = ref(false)
+
+watch(isOpen, (val) => {
+  document.body.style.overflow = val ? 'hidden' : ''
+})
 </script>
 
 <style scoped>
@@ -62,16 +69,16 @@ li a {
   display: none;
 }
 
+.overlay {
+  display: none;
+}
+
 @media (hover: hover) {
   li a:hover {
     color: var(--teal-400);
   }
 }
 
-@media (max-width: 1440px) {
-}
-@media (max-width: 1024px) {
-}
 @media (max-width: 768px) {
   .menu {
     display: block;
@@ -88,7 +95,7 @@ li a {
     flex-direction: column;
     align-items: center;
     padding-left: 0;
-    transition: right 0.3s ease-out;
+    transition: right 0.2s ease-out;
   }
 
   li a {
@@ -96,7 +103,25 @@ li a {
   }
 
   ul.active {
-    right: 2rem;
+    right: 1rem;
   }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+  }
+}
+
+.overlay-enter-active,
+.overlay-leave-active {
+  transition: opacity 0.3s ease-out;
+}
+
+.overlay-enter-from,
+.overlay-leave-to {
+  opacity: 0;
 }
 </style>

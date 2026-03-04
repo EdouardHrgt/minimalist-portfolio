@@ -14,6 +14,7 @@
   --indigo-500: hsl(231, 70%, 60%);
 
   --blue-950: hsl(205, 41%, 21%);
+  --teal-900: hsl(167, 36%, 40%);
   --teal-400: hsl(167, 36%, 54%);
   --skygv-400: hsl(193, 62%, 54%);
   --linen-50: hsl(9, 100%, 96%);
@@ -41,6 +42,7 @@
   --sp-400: 4rem;
   --sp-450: 4.5rem;
   --sp-500: 5rem;
+  --sections-space: 5rem;
 
   /* WEIGHT */
   --bolder: 900;
@@ -134,6 +136,16 @@
   margin: 0;
 }
 
+* {
+  user-select: none;
+}
+
+p,
+article,
+.selectable {
+  user-select: text;
+}
+
 /* 3. Enable keyword animations */
 @media (prefers-reduced-motion: no-preference) {
   html {
@@ -175,6 +187,7 @@ h5,
 h6 {
   overflow-wrap: break-word;
   pointer-events: none;
+  color: var(--slate-800);
 }
 
 /* 9. Improve line wrapping */
@@ -213,9 +226,15 @@ button {
 }
 
 @media (max-width: 1024px) {
+  :root {
+    --fs-1: 40px;
+  }
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding-inline: var(--sp-100);
+  }
 }
 
 @media (hover: hover) {
