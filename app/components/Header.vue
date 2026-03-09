@@ -7,13 +7,13 @@
     <nav>
       <ul class="flex-align-justify" :class="{ active: isOpen }">
         <li>
-          <NuxtLink to="/" class="tp-7">home</NuxtLink>
+          <NuxtLink to="/" class="tp-7" @click="closeMenu">home</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/portfolio" class="tp-7">Portfolio</NuxtLink>
+          <NuxtLink to="/portfolio" class="tp-7" @click="closeMenu">Portfolio</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/contact" class="tp-7">contact me</NuxtLink>
+          <NuxtLink to="/contact" class="tp-7" @click="closeMenu">contact me</NuxtLink>
         </li>
       </ul>
     </nav>
@@ -36,6 +36,14 @@
 
 <script setup>
 const isOpen = ref(false)
+
+const closeMenu = () => {
+  if (isOpen.value === true) {
+    setTimeout(() => {
+      isOpen.value = false
+    }, '400')
+  }
+}
 
 watch(isOpen, (val) => {
   document.body.style.overflow = val ? 'hidden' : ''

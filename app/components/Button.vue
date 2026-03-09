@@ -1,5 +1,5 @@
 <template>
-  <button v-if="label && primary" class="btn-primary tp-7 flex-align">
+  <button v-if="label && primary" class="btn-primary tp-7 flex-align" @click="scrollTo">
     <div class="btn-icon">
       <img src="/images/icons/down-arrows.svg" alt="An icon of arrows pointing down side" />
     </div>
@@ -10,11 +10,17 @@
 </template>
 
 <script setup>
-
 defineProps({
   label: String,
   primary: Boolean,
+  goTo: String,
 })
+
+const scrollTo = () => {
+  if (!props.goTo || !import.meta.client) return
+  const target = document.querySelector(props.goTo)
+  if (target) target.scrollIntoView({ behavior: 'smooth' })
+}
 </script>
 
 <style scoped>

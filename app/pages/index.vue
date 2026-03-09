@@ -3,7 +3,7 @@
     <section class="presentation">
       <div class="presentation-txt">
         <h1 class="tp-1">Hey, I’m Edouard and I love building beautiful websites</h1>
-        <Button label="about me" :primary="true" />
+        <Button label="about me" :primary="true" goTo="#about" />
       </div>
     </section>
 
@@ -21,7 +21,7 @@
             alt="Profile picture of Edouard Herrengt" />
         </picture>
       </div>
-      <div class="about-txt">
+      <div class="about-txt" id="about">
         <h2 class="tp-2">About Me</h2>
         <p class="tp-4">
           I’m a junior front-end developer looking for a new role in an exciting company. I focus on
