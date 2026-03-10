@@ -127,6 +127,10 @@
   margin-inline: auto;
   max-width: var(--mx-width);
 }
+.border-block {
+  border-top: 1px solid var(--slate-300);
+  border-bottom: 1px solid var(--slate-300);
+}
 
 /* 1. Use a more-intuitive box-sizing model */
 *,
@@ -206,7 +210,7 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
-    color: var(--slate-800);
+  color: var(--slate-800);
 }
 
 #root,
@@ -247,5 +251,4 @@ button {
   }
 }
 
-@media (hover: hover) {
-}
+

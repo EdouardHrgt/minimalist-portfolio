@@ -32,10 +32,19 @@
     </section>
     <section class="contact">
       <h2 class="tp-2">Contact Me</h2>
-      <form>
+      <form @submit.prevent="handleSubmit">
+        <input
+          type="text"
+          v-model="form.honeypot"
+          name="botcheck"
+          style="display: none"
+          tabindex="-1"
+          autocomplete="off" />
+
         <div class="form-group">
           <label for="name" class="tp-6-bold">Name</label>
           <input
+            v-model="form.name"
             type="text"
             name="name"
             id="name"
@@ -43,9 +52,11 @@
             placeholder="Jane Appleseed"
             class="tp-6" />
         </div>
+
         <div class="form-group">
           <label for="email" class="tp-6-bold">Email Address</label>
           <input
+            v-model="form.email"
             type="email"
             name="email"
             id="email"
@@ -53,23 +64,80 @@
             placeholder="email@example.com"
             class="tp-6" />
         </div>
+
         <div class="form-group">
           <label for="message" class="tp-6-bold">Message</label>
           <textarea
+            v-model="form.message"
             name="message"
             id="message"
-            placeholder="How can i help?"
-            class="tp-6"></textarea>
+            placeholder="How can I help?"
+            minlength="20"
+            required
+            class="tp-6" />
         </div>
+
         <div class="form-group">
-          <input type="submit" value="SEND MESSAGE" class="tp-7 submit" />
+          <input
+            type="submit"
+            :value="status === 'loading' ? 'SENDING...' : 'SEND MESSAGE'"
+            :disabled="status === 'loading'"
+            class="tp-7 submit" />
+          <!-- FEEDBACK MESSAGES -->
+          <p v-if="status === 'success'" class="form-success">
+            ✅ Your message has been sent successfully, I'll get back to you as soon as possible,
+            thank you.!
+          </p>
+          <p v-if="status === 'error'" class="form-error">
+            ❌ Something went wrong. Please try again.
+          </p>
         </div>
       </form>
     </section>
   </main>
 </template>
 
-<script setup></script>
+<script setup>
+const form = reactive({
+  name: '',
+  email: '',
+  message: '',
+  honeypot: '', // Bot trap
+})
+
+const status = ref('success')
+
+const handleSubmit = async () => {
+  if (form.honeypot) return
+
+  status.value = 'loading'
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        access_key: '6d89da7a-e93c-4185-8409-be1f00ade10f',
+        name: form.name,
+        email: form.email,
+        message: form.message,
+        botcheck: form.honeypot,
+      }),
+    })
+
+    const data = await res.json()
+    status.value = data.success ? 'success' : 'error'
+
+    if (data.success) {
+      form.name = ''
+      form.email = ''
+      form.message = ''
+    }
+  } catch {
+    status.value = 'error'
+  }
+}
+</script>
 
 <style scoped>
 /* FULL PAGE */
@@ -115,6 +183,7 @@ main {
 
 .form-group {
   margin-bottom: var(--sp-100);
+  position: relative;
 }
 
 label {
@@ -140,6 +209,22 @@ textarea {
   cursor: pointer;
   transition: all 0.4s;
   border: 1px solid var(--slate-800);
+}
+
+.form-success,
+.form-error {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 10px;
+}
+
+.form-success {
+  color: rgb(37, 143, 68);
+}
+
+.form-error {
+  color: rgb(196, 36, 36);
 }
 
 @media (hover: hover) {

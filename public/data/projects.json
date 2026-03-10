@@ -8,6 +8,15 @@
       "tablet": "/images/portfolio/tablet/image-portfolio-manage@2x.jpg",
       "mobile": "/images/portfolio/mobile/image-portfolio-manage@2x.jpg"
     },
+    "detail": {
+      "hero": "/images/detail/desktop/image-manage-hero@2x.jpg",
+      "previews": [
+        "/images/detail/desktop/image-manage-preview-1@2x.jpg",
+        "/images/detail/desktop/image-manage-preview-2@2x.jpg"
+      ]
+    },
+    "url": "https://edouard-herrengt.com/",
+    "tags": [],
     "regular": false
   },
   {
@@ -19,6 +28,15 @@
       "tablet": "/images/portfolio/tablet/image-portfolio-bookmark@2x.jpg",
       "mobile": "/images/portfolio/mobile/image-portfolio-bookmark@2x.jpg"
     },
+    "detail": {
+      "hero": "/images/detail/desktop/image-bookmark-hero@2x.jpg",
+      "previews": [
+        "/images/detail/desktop/image-bookmark-preview-1@2x.jpg",
+        "/images/detail/desktop/image-bookmark-preview-2@2x.jpg"
+      ]
+    },
+    "url": "https://edouard-herrengt.com/",
+    "tags": [],
     "regular": true
   },
   {
@@ -30,6 +48,15 @@
       "tablet": "/images/portfolio/tablet/image-portfolio-insure@2x.jpg",
       "mobile": "/images/portfolio/mobile/image-portfolio-insure@2x.jpg"
     },
+    "detail": {
+      "hero": "/images/detail/desktop/image-insure-hero@2x.jpg",
+      "previews": [
+        "/images/detail/desktop/image-insure-preview-1@2x.jpg",
+        "/images/detail/desktop/image-insure-preview-2@2x.jpg"
+      ]
+    },
+    "url": "https://edouard-herrengt.com/",
+    "tags": [],
     "regular": false
   },
   {
@@ -41,6 +68,15 @@
       "tablet": "/images/portfolio/tablet/image-portfolio-fylo@2x.jpg",
       "mobile": "/images/portfolio/mobile/image-portfolio-fylo@2x.jpg"
     },
+    "detail": {
+      "hero": "/images/detail/desktop/image-fylo-hero@2x.jpg",
+      "previews": [
+        "/images/detail/desktop/image-fylo-preview-1@2x.jpg",
+        "/images/detail/desktop/image-fylo-preview-2@2x.jpg"
+      ]
+    },
+    "url": "https://edouard-herrengt.com/",
+    "tags": [],
     "regular": true
   }
 ]
