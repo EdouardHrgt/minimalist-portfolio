@@ -1,25 +1,30 @@
 <template>
-  <button v-if="label && primary" class="btn-primary tp-7 flex-align" @click="scrollTo">
+  <button v-if="label && primary" class="btn-primary tp-7 flex-align" @click="handleClick">
     <div class="btn-icon">
       <img src="/images/icons/down-arrows.svg" alt="An icon of arrows pointing down side" />
     </div>
     <p class="tp-7">{{ label }}</p>
   </button>
-  <button v-else-if="label && !primary" class="btn-secondary tp-7">{{ label }}</button>
-  <button v-else class="tp-7">Default Btn</button>
+  <button v-else-if="label && !primary" class="btn-secondary tp-7" @click="handleClick">
+    {{ label }}
+  </button>
+  <button v-else class="tp-7" @click="handleClick">Default Btn</button>
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   label: String,
   primary: Boolean,
   goTo: String,
+  file: String,
 })
 
-const scrollTo = () => {
-  if (!props.goTo || !import.meta.client) return
-  const target = document.querySelector(props.goTo)
-  if (target) target.scrollIntoView({ behavior: 'smooth' })
+function handleClick() {
+  if (props.file) {
+    window.open(props.file, '_blank')
+  } else if (props.goTo) {
+    window.location.href = props.goTo
+  }
 }
 </script>
 

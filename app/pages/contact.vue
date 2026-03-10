@@ -102,10 +102,10 @@ const form = reactive({
   name: '',
   email: '',
   message: '',
-  honeypot: '', // Bot trap
+  honeypot: '', // Bot trap è_é
 })
 
-const status = ref('success')
+const status = ref('')
 
 const handleSubmit = async () => {
   if (form.honeypot) return

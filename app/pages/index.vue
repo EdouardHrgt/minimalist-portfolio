@@ -3,7 +3,7 @@
     <section class="presentation">
       <div class="presentation-txt">
         <h1 class="tp-1">Hey, I’m Edouard and I love building beautiful websites</h1>
-        <Button label="See My CV" :primary="true"  />
+        <Button label="See My CV" :primary="true" file="/cv.pdf" />
       </div>
     </section>
 
