@@ -2,11 +2,16 @@
   <section class="contact">
     <h3 class="tp-2">Interested in doing a project together?</h3>
     <span class="contact-line"></span>
-    <Button label="contact me" :primary="false" />
+
+    <NuxtLink to="/contact"
+      ><Button label="contact me" :primary="false" @click="toContact"
+    /></NuxtLink>
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+const toContact = () => {}
+</script>
 
 <style scoped>
 .contact {

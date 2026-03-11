@@ -36,7 +36,7 @@
   {
     "title": "Weather App",
     "slug": "weather-app",
-    "description": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
+    "description": "A COMPLETER",
     "preview": "/images/projects/portfolio-preview/weather-app.png",
     "detail": {
       "hero": "/images/projects/hero/weather-app-main.jpg",
@@ -53,7 +53,7 @@
   {
     "title": "Designo",
     "slug": "designo",
-    "description": "Fullstack project using for the first time React. I had to learn everything of this library to build this 'fake' Personnal bank Application. I've added some delay over the requests to let users see the loading animation during the datas fetchings. I've created a custom Fetch function that also manage states (loading / Error / datas).",
+    "description": "A COMPLETER",
     "preview": "/images/projects/portfolio-preview/designo.png",
     "detail": {
       "hero": "/images/projects/hero/designo-main.jpg",
@@ -70,7 +70,7 @@
   {
     "title": "MyTeam",
     "slug": "myteam",
-    "description": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
+    "description": "A COMPLETER",
     "preview": "/images/projects/portfolio-preview/myteam.png",
     "detail": {
       "hero": "/images/projects/hero/my-team-main.jpg",
@@ -82,6 +82,40 @@
     "url": "https://myteam-edh.netlify.app/home",
     "git": "https://github.com/EdouardHrgt/my-team",
     "tags": ["Vue.js", "Figma", "Frontend"],
+    "regular": false
+  },
+  {
+    "title": "Ip Address Tracker",
+    "slug": "ip-address-tracker",
+    "description": "A COMPLETER",
+    "preview": "/images/projects/portfolio-preview/ip-address-tracker.webp",
+    "detail": {
+      "hero": "/images/projects/hero/ip-tracker-main.jpg",
+      "previews": [
+        "/images/projects/sub/ip-tracker-sub-1.jpg",
+        "/images/projects/sub/ip-tracker-sub-2.jpg"
+      ]
+    },
+    "url": "https://ip-address-tracker-edh.netlify.app/",
+    "git": "https://github.com/EdouardHrgt/ip-address-tracker",
+    "tags": ["Javascript", "API", "Frontend"],
+    "regular": true
+  },
+  {
+    "title": "Audiophile",
+    "slug": "audiophile",
+    "description": "A COMPLETER",
+    "preview": "/images/projects/portfolio-preview/audiophile.png",
+    "detail": {
+      "hero": "/images/projects/hero/audiophile-main.jpg",
+      "previews": [
+        "/images/projects/sub/audiophile-sub-1.jpg",
+        "/images/projects/sub/audiophile-sub-2.jpg"
+      ]
+    },
+    "url": "https://audiophile-edh.netlify.app/",
+    "git": "https://github.com/EdouardHrgt/Audiophile",
+    "tags": ["Vue.js", "CSS", "HTML"],
     "regular": false
   }
 ]

@@ -42,6 +42,7 @@ article {
 
 .mockups img {
   display: block;
+  border: 1px solid var(--neutral-700);
 }
 
 .description {

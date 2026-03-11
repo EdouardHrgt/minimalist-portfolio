@@ -183,6 +183,7 @@ const goTo = (url) => {
 
 .project-preview img {
   margin-top: var(--sp-200);
+  border: 1px solid var(--neutral-700);
 }
 
 /* PREV / NEXT BUTTONS */

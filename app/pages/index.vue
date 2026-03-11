@@ -26,12 +26,12 @@
         <p class="tp-4">
           I’m a front-end developer looking for a new role in an exciting company. I focus on
           writing accessible HTML, using modern CSS practices and writing clean JavaScript. When
-          writing JavaScript code, I mostly use Vue.js / Nuxt, but I can adapt to whatever tools are required.
-          I’m based in Lille, FR, but I’m happy working remotely and have experience in remote
-          teams. When I’m not coding, you’ll find me outdoors. I love being out in nature whether
-          that’s going for a walk or cycling. I’d love you to check out my work.
+          writing JavaScript code, I mostly use Vue.js / Nuxt, but I can adapt to whatever tools are
+          required. I’m based in Lille, FR, but I’m happy working remotely and have experience in
+          remote teams. When I’m not coding, you’ll find me outdoors. I love being out in nature
+          whether that’s going for a walk or cycling. I’d love you to check out my work.
         </p>
-        <Button label="go to portfolio" :primary="false" />
+        <NuxtLink to="/portfolio"><Button label="go to portfolio" :primary="false" /></NuxtLink>
       </div>
     </section>
     <ContactMe />
@@ -136,6 +136,7 @@ h1 {
   .presentation {
     background-image: url(/images/homepage/mobile/image-homepage-hero@2x.jpg);
     background-position: center;
+    margin-bottom: var(--sp-200);
   }
   .presentation-txt {
     max-width: 100%;

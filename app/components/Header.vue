@@ -41,7 +41,7 @@ const closeMenu = () => {
   if (isOpen.value === true) {
     setTimeout(() => {
       isOpen.value = false
-    }, '400')
+    }, '100')
   }
 }
 

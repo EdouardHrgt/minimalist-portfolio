@@ -19,7 +19,6 @@
           <NuxtLink to="/contact" class="tp-7">contact me</NuxtLink>
         </li>
       </ul>
-
       <div class="socials flex-align">
         <NuxtLink to="https://github.com/EdouardHrgt" target="_blank" rel="noopener noreferrer"
           ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24">
@@ -88,6 +87,16 @@ svg {
   gap: var(--sp-100);
   justify-content: center;
   padding-left: 2.4rem; /* Needed to align on X axis the SVGs... */
+}
+
+.lang {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.lang img {
+  width: 1.5rem;
+  cursor: pointer;
 }
 
 @media (hover: hover) {
