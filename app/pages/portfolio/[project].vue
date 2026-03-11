@@ -50,12 +50,16 @@ const goTo = (url) => {
         <div class="left-col border-block">
           <h1 class="tp-2">{{ project.title }}</h1>
           <p class="tp-5">{{ project.description }}</p>
+
           <ul class="tags">
             <li class="tp-6-bold" v-for="tag in project.tags" :key="tag" v-if="project.tags">
               {{ tag }}
             </li>
           </ul>
-          <Button label="Visit website" @click="goTo(project.url)" />
+          <div class="btns-wrapper flex-align">
+            <Button label="Visit Website" @click="goTo(project.url)" />
+            <Button label="see Git Repo" :primary="true" @click="goTo(project.git)" />
+          </div>
         </div>
         <div class="right-col">
           <h2 class="tp-3">Project Background</h2>
@@ -158,6 +162,10 @@ const goTo = (url) => {
   background-color: var(--teal-100);
   padding: 0px 16px;
   border-radius: 16px;
+}
+
+.btns-wrapper {
+  gap: var(--sp-100);
 }
 
 .right-col {

@@ -8,7 +8,7 @@
   <button v-else-if="label && !primary" class="btn-secondary tp-7" @click="handleClick">
     {{ label }}
   </button>
-  <button v-else class="tp-7" @click="handleClick">Default Btn</button>
+  <button v-else class="btn-default tp-7" @click="handleClick">See Git Repository</button>
 </template>
 
 <script setup>
@@ -50,6 +50,14 @@ button {
 .btn-secondary {
   border: 1px solid var(--slate-800);
   color: var(--slate-800);
+}
+
+.btn-default {
+ border: none;
+ background-color: none;
+ color: var(--teal-400);
+ font-style: italic;
+ text-transform: capitalize;
 }
 
 .btn-icon {

@@ -1,5 +1,39 @@
 [
   {
+    "title": "Bookmark Manager",
+    "slug": "bookmark-manager",
+    "description": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
+    "preview": "/images/projects/portfolio-preview/bookmark-manager.png",
+    "detail": {
+      "hero": "/images/projects/hero/bookmark-manager-main.jpg",
+      "previews": [
+        "/images/projects/sub/bookmark-manager-sub-1.jpg",
+        "/images/projects/sub/bookmark-manager-sub-2.jpg"
+      ]
+    },
+    "url": "https://bookmark-manager-edh.netlify.app/",
+    "git": "https://github.com/EdouardHrgt/bookmark-manager",
+    "tags": ["Vue.js", "CSS", "HTML", "Frontend"],
+    "regular": false
+  },
+  {
+    "title": "Finance App",
+    "slug": "finance-app",
+    "description": "Fullstack project using for the first time React. I had to learn everything of this library to build this 'fake' Personnal bank Application. I've added some delay over the requests to let users see the loading animation during the datas fetchings. I've created a custom Fetch function that also manage states (loading / Error / datas).",
+    "preview": "/images/projects/portfolio-preview/finance-app.png",
+    "detail": {
+      "hero": "/images/projects/hero/finance-app-main.jpg",
+      "previews": [
+        "/images/projects/sub/finance-app-sub-1.jpg",
+        "/images/projects/sub/finance-app-sub-2.jpg"
+      ]
+    },
+    "url": "https://finace-app-edh.netlify.app/",
+    "git": "https://github.com/EdouardHrgt/finance-app",
+    "tags": ["React", "Node.js", "Express", "Fullstack"],
+    "regular": true
+  },
+  {
     "title": "Weather App",
     "slug": "weather-app",
     "description": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
@@ -12,7 +46,42 @@
       ]
     },
     "url": "https://weather-app-edh.netlify.app/",
-    "tags": ["Vue.js", "HTML", "Frontend", "CSS"],
+    "git": "https://github.com/EdouardHrgt/weather-app",
+    "tags": ["Vue.js", "API", "Frontend"],
+    "regular": false
+  },
+  {
+    "title": "Designo",
+    "slug": "designo",
+    "description": "Fullstack project using for the first time React. I had to learn everything of this library to build this 'fake' Personnal bank Application. I've added some delay over the requests to let users see the loading animation during the datas fetchings. I've created a custom Fetch function that also manage states (loading / Error / datas).",
+    "preview": "/images/projects/portfolio-preview/designo.png",
+    "detail": {
+      "hero": "/images/projects/hero/designo-main.jpg",
+      "previews": [
+        "/images/projects/sub/designo-sub-2.jpg",
+        "/images/projects/sub/designo-sub-1.jpg"
+      ]
+    },
+    "url": "https://designo-0website.netlify.app/",
+    "git": "https://github.com/EdouardHrgt/Designo",
+    "tags": ["Vue.js", "Frontend"],
+    "regular": true
+  },
+  {
+    "title": "MyTeam",
+    "slug": "myteam",
+    "description": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
+    "preview": "/images/projects/portfolio-preview/myteam.png",
+    "detail": {
+      "hero": "/images/projects/hero/my-team-main.jpg",
+      "previews": [
+        "/images/projects/sub/my-team-sub-1.jpg",
+        "/images/projects/sub/my-team-sub-2.jpg"
+      ]
+    },
+    "url": "https://myteam-edh.netlify.app/home",
+    "git": "https://github.com/EdouardHrgt/my-team",
+    "tags": ["Vue.js", "Figma", "Frontend"],
     "regular": false
   }
 ]
