@@ -42,6 +42,7 @@ const goTo = (url) => {
       <!-- MAIN PROJECT'S IMAGE (HERO) -->
       <section class="project-header">
         <img :src="project.detail.hero" :alt="project.title" />
+        <!-- Canva: 1440 x 640 || Image: 1100 x 550 -->
       </section>
 
       <!-- DETAIL OF THE PROJECT (2 COLUMNS) -->
@@ -49,9 +50,10 @@ const goTo = (url) => {
         <div class="left-col border-block">
           <h1 class="tp-2">{{ project.title }}</h1>
           <p class="tp-5">{{ project.description }}</p>
-          <ul>
-            <li class="tp-6-bold">Vue.js</li>
-            <li class="tp-6-bold">Javascript</li>
+          <ul class="tags">
+            <li class="tp-6-bold" v-for="tag in project.tags" :key="tag" v-if="project.tags">
+              {{ tag }}
+            </li>
           </ul>
           <Button label="Visit website" @click="goTo(project.url)" />
         </div>
@@ -71,6 +73,7 @@ const goTo = (url) => {
             v-for="image in project.detail.previews"
             class="project-preview">
             <img :src="image" :alt="project.title" />
+            <!-- IMAGES: 750 x 370-->
           </div>
         </div>
       </section>
@@ -140,16 +143,21 @@ const goTo = (url) => {
   margin-block: var(--sp-150);
 }
 
-.left-col ul {
+.tags {
   gap: var(--sp-50);
   display: flex;
   padding: 0;
   margin: 0;
   margin-bottom: var(--sp-150);
+  max-width: 350px;
+  flex-wrap: wrap;
 }
 
-.left-col li {
+.tags li {
   color: var(--teal-400);
+  background-color: var(--teal-100);
+  padding: 0px 16px;
+  border-radius: 16px;
 }
 
 .right-col {
@@ -222,6 +230,12 @@ const goTo = (url) => {
   .left-col,
   .right-col {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-header {
+    margin-bottom: var(--sp-300);
   }
 }
 

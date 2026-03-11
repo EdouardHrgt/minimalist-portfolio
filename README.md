@@ -1,3 +1,7 @@
+# Images Format (Project page)
+Hero banner image = Canva (background color): 1440 x 640 || Image: 1100 x 550
+detail images = 750 x 370
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
