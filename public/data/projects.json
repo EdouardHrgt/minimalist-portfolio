@@ -3,36 +3,16 @@
     "title": "Weather App",
     "slug": "weather-app",
     "description": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
-    "images": {
-      "pc": "/images/detail/hero/weather-app-main.jpg"
-    },
+    "preview": "/images/projects/portfolio-preview/weather-app.png",
     "detail": {
-      "hero": "/images/detail/hero/weather-app-main.jpg",
+      "hero": "/images/projects/hero/weather-app-main.jpg",
       "previews": [
-        "/images/detail/sub/weather-app-sub-1.jpg",
-        "/images/detail/sub/weather-app-sub-2.jpg"
+        "/images/projects/sub/weather-app-sub-1.jpg",
+        "/images/projects/sub/weather-app-sub-2.jpg"
       ]
     },
-    "url": "https://edouard-herrengt.com/",
+    "url": "https://weather-app-edh.netlify.app/",
     "tags": ["Vue.js", "HTML", "Frontend", "CSS"],
     "regular": false
-  },
-  {
-    "title": "Manage",
-    "slug": "manage",
-    "description": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
-    "images": {
-      "pc": "/images/detail/hero/weather-app-main.jpg"
-    },
-    "detail": {
-      "hero": "/images/detail/hero/weather-app-main.jpg",
-      "previews": [
-        "/images/detail/sub/weather-app-sub-1.jpg",
-        "/images/detail/sub/weather-app-sub-2.jpg"
-      ]
-    },
-    "url": "https://edouard-herrengt.com/",
-    "tags": ["Vue.js", "HTML"],
-    "regular": true
   }
 ]

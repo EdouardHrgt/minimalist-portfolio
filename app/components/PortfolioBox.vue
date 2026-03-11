@@ -1,11 +1,7 @@
 <template>
   <article v-if="data" :class="{ regular: data.regular }">
     <div class="mockups">
-      <picture>
-        <source :srcset="data.images.mobile" media="(max-width: 768px)" />
-        <source :srcset="data.images.tablet" media="(max-width: 1024px)" />
-        <img :src="data.images.pc" :alt="data.title" />
-      </picture>
+      <img :src="data.preview" :alt="data.title" />
     </div>
     <div class="description">
       <h2 class="tp-2">{{ data.title }}</h2>
@@ -40,8 +36,7 @@ article {
 }
 
 .mockups {
-  max-width: 540px;
-  max-height: 500px;
+  max-width: 650px;
   overflow: hidden;
 }
 
@@ -64,10 +59,15 @@ article {
   margin-block: var(--sp-200);
 }
 
+@media (max-width: 1120px) {
+  .mockups {
+    max-width: 530px;
+  }
+}
+
 @media (max-width: 1024px) {
   .mockups {
     max-width: 339px;
-    max-height: 314px;
   }
   .description {
     max-width: 285px;
@@ -76,8 +76,7 @@ article {
 
 @media (max-width: 768px) {
   .mockups {
-    max-width: 331px;
-    max-height: 308px;
+    max-width: 90%;
     margin-inline: auto;
   }
 
