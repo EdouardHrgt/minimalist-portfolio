@@ -1,6 +1,7 @@
 <script setup>
 const route = useRoute()
 const router = useRouter()
+const heroLoaded = ref(false)
 
 const { data: projects } = await useFetch('/data/projects.json')
 
@@ -20,10 +21,12 @@ const nextProject = computed(() => {
   return projects.value[currentIndex.value + 1]
 })
 
-const isVisible = ref(true)
+const isVisible = ref(false)
 const slideDirection = ref('') // 'left' ou 'right'
 
 const navigateTo = async (slug, direction) => {
+  heroLoaded.value = false
+  window.scrollTo({ top: 0, behavior: 'instant' }) // ← scroll immédiat AVANT l'anim
   slideDirection.value = direction
   isVisible.value = false
   await new Promise((resolve) => setTimeout(resolve, 300))
@@ -34,14 +37,23 @@ const navigateTo = async (slug, direction) => {
 const goTo = (url) => {
   window.open(url, '_blank').focus()
 }
+
+onMounted(() => {
+  isVisible.value = true
+})
 </script>
 
 <template>
-  <Transition :name="`slide-${slideDirection}`">
+  <Transition :name="slideDirection ? `slide-${slideDirection}` : 'fade'">
     <main v-if="project && isVisible" :key="project.slug" class="container">
       <!-- MAIN PROJECT'S IMAGE (HERO) -->
       <section class="project-header">
-        <img :src="project.detail.hero" :alt="project.title" />
+        <div v-if="!heroLoaded" class="hero-skeleton" />
+        <img
+          :src="project.detail.hero"
+          :alt="project.title"
+          :class="{ 'hero-hidden': !heroLoaded }"
+          @load="heroLoaded = true" />
         <!-- Canva: 1440 x 640 || Image: 1100 x 550 -->
       </section>
 
@@ -127,6 +139,36 @@ const goTo = (url) => {
 .project-header img {
   display: block;
   width: 100%;
+}
+
+.hero-skeleton {
+  width: 100%;
+  aspect-ratio: 1440 / 640;
+  background: linear-gradient(
+    90deg,
+    var(--neutral-700) 25%,
+    var(--slate-300) 50%,
+    var(--neutral-700) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+.hero-hidden {
+  opacity: 0;
+  position: absolute;
+}
+
+
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 /* DETAIL SECTION (2 columns) */
@@ -257,12 +299,28 @@ const goTo = (url) => {
   }
 }
 
-/* Slide vers la gauche (next) */
+/* Chargement initial : fade simple */
+.fade-enter-active {
+  --loading-time: 1s;
+  transition:
+    opacity calc(var(--loading-time) * 1.2) ease,
+    transform var(--loading-time) ease;
+  transform: translateY(0);
+}
+.fade-enter-from {
+  opacity: 0;
+  transform: translateY(5rem);
+}
+
+/* Navigation previous / next */
 .slide-left-enter-active,
 .slide-left-leave-active,
 .slide-right-enter-active,
 .slide-right-leave-active {
-  transition: all 0.3s ease;
+  --timer: 1s;
+  transition:
+    opacity var(--timer) ease,
+    transform var(--timer) ease;
 }
 
 .slide-left-enter-from {
@@ -281,18 +339,5 @@ const goTo = (url) => {
 .slide-right-leave-to {
   opacity: 0;
   transform: translateX(40px);
-}
-
-.previous,
-.next {
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-}
-
-.previous.disabled,
-.next.disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
 }
 </style>

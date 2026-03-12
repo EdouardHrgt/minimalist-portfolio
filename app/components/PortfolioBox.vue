@@ -18,6 +18,7 @@
 const { data } = defineProps({
   data: Object,
 })
+const imageLoaded = ref(false)
 
 const navigateToProject = () => {
   navigateTo(`/portfolio/${data.slug}`)
@@ -92,7 +93,7 @@ article {
   .description {
     display: block;
     max-width: 100%;
-      border-top: none;
+    border-top: none;
   }
 
   .description p {
