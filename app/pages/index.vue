@@ -9,26 +9,18 @@
 
     <section class="about-me">
       <div class="photo">
-        <picture>
-          <source
-            media="(max-width: 768px)"
-            srcset="/images/homepage/mobile/image-homepage-profile@2x.jpg" />
-          <source
-            media="(max-width: 1024px)"
-            srcset="/images/homepage/tablet/image-homepage-profile@2x.jpg" />
-          <img
-            src="/images/homepage/desktop/image-homepage-profile@2x.jpg"
-            alt="Profile picture of Edouard Herrengt" />
-        </picture>
-        
+        <img
+          src="/images/homepage/desktop/Photo-Edouard.jpg"
+          alt="Photography Of Edouard Herrengt, Web Developper" />
       </div>
+
       <div class="about-txt">
         <h2 class="tp-2">About Me</h2>
         <p class="tp-4">
           I’m a front-end developer looking for a new role in an exciting company. I focus on
           writing accessible HTML, using modern CSS practices and writing clean JavaScript. When
           writing JavaScript code, I mostly use Vue.js / Nuxt, but I can adapt to whatever tools are
-          required. I’m based in Lille, FR, but I’m happy working remotely and have experience in
+          required. I’m based in Lille France, but I’m happy working remotely and have experience in
           remote teams. When I’m not coding, you’ll find me outdoors. I love being out in nature
           whether that’s going for a walk or cycling. I’d love you to check out my work.
         </p>
@@ -79,6 +71,10 @@ h1 {
 
 .photo {
   width: 540px;
+}
+
+.photo img {
+  image-rendering: crisp-edges;
 }
 
 .about-txt {

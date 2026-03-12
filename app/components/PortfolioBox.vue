@@ -31,8 +31,8 @@ const navigateToProject = () => {
 
 article {
   display: flex;
-  align-items: stretch;
-  margin-bottom: var(--sp-500);
+  align-items: start;
+  margin-bottom: 6rem;
 }
 
 .mockups {
@@ -92,6 +92,7 @@ article {
   .description {
     display: block;
     max-width: 100%;
+      border-top: none;
   }
 
   .description p {

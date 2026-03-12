@@ -36,7 +36,7 @@
   {
     "title": "Weather App",
     "slug": "weather-app",
-    "description": "A COMPLETER",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi blanditiis est distinctio omnis quo. Placeat dolor, at voluptates, atque ipsum neque earum molestias blanditiis exercitationem corporis quos aut tempora sit accusantium odio ut repellat quidem?",
     "preview": "/images/projects/portfolio-preview/weather-app.png",
     "detail": {
       "hero": "/images/projects/hero/weather-app-main.jpg",
@@ -53,7 +53,7 @@
   {
     "title": "Designo",
     "slug": "designo",
-    "description": "A COMPLETER",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi blanditiis est distinctio omnis quo. Placeat dolor, at voluptates, atque ipsum neque earum molestias blanditiis exercitationem corporis quos aut tempora sit accusantium odio ut repellat quidem?",
     "preview": "/images/projects/portfolio-preview/designo.png",
     "detail": {
       "hero": "/images/projects/hero/designo-main.jpg",
@@ -70,7 +70,7 @@
   {
     "title": "MyTeam",
     "slug": "myteam",
-    "description": "A COMPLETER",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi blanditiis est distinctio omnis quo. Placeat dolor, at voluptates, atque ipsum neque earum molestias blanditiis exercitationem corporis quos aut tempora sit accusantium odio ut repellat quidem?",
     "preview": "/images/projects/portfolio-preview/myteam.png",
     "detail": {
       "hero": "/images/projects/hero/my-team-main.jpg",
@@ -87,7 +87,7 @@
   {
     "title": "Ip Address Tracker",
     "slug": "ip-address-tracker",
-    "description": "A COMPLETER",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi blanditiis est distinctio omnis quo. Placeat dolor, at voluptates, atque ipsum neque earum molestias blanditiis exercitationem corporis quos aut tempora sit accusantium odio ut repellat quidem?",
     "preview": "/images/projects/portfolio-preview/ip-address-tracker.webp",
     "detail": {
       "hero": "/images/projects/hero/ip-tracker-main.jpg",
@@ -104,7 +104,7 @@
   {
     "title": "Audiophile",
     "slug": "audiophile",
-    "description": "A COMPLETER",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi blanditiis est distinctio omnis quo. Placeat dolor, at voluptates, atque ipsum neque earum molestias blanditiis exercitationem corporis quos aut tempora sit accusantium odio ut repellat quidem?",
     "preview": "/images/projects/portfolio-preview/audiophile.png",
     "detail": {
       "hero": "/images/projects/hero/audiophile-main.jpg",
@@ -117,5 +117,22 @@
     "git": "https://github.com/EdouardHrgt/Audiophile",
     "tags": ["Vue.js", "CSS", "HTML"],
     "regular": false
+  },
+  {
+    "title": "Photosnap",
+    "slug": "photosnap",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi blanditiis est distinctio omnis quo. Placeat dolor, at voluptates, atque ipsum neque earum molestias blanditiis exercitationem corporis quos aut tempora sit accusantium odio ut repellat quidem?",
+    "preview": "/images/projects/portfolio-preview/photosnap.png",
+    "detail": {
+      "hero": "/images/projects/hero/photosnap-main.jpg",
+      "previews": [
+        "/images/projects/sub/photosnap-sub-1.jpg",
+        "/images/projects/sub/photosnap-sub-2.jpg"
+      ]
+    },
+    "url": "https://photosnap-edh.netlify.app/",
+    "git": "https://github.com/EdouardHrgt/photosnap",
+    "tags": ["Vue.js", "Frontend"],
+    "regular": true
   }
 ]

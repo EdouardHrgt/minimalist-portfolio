@@ -24,7 +24,6 @@ h1 {
   padding-block: var(--sp-200);
   color: var(--slate-800);
   text-decoration: underline var(--slate-800);
-  text-decoration-thickness: 3px;
 }
 
 @media (max-width: 1472px) {
@@ -37,8 +36,5 @@ h1 {
   main {
     margin-inline: var(--sp-100);
   }
-}
-
-@media (hover: hover) {
 }
 </style>
