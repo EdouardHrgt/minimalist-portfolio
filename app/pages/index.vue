@@ -20,6 +20,7 @@
             src="/images/homepage/desktop/image-homepage-profile@2x.jpg"
             alt="Profile picture of Edouard Herrengt" />
         </picture>
+        
       </div>
       <div class="about-txt">
         <h2 class="tp-2">About Me</h2>

@@ -21,34 +21,11 @@ h1 {
   text-align: center;
   margin-bottom: var(--sp-500);
   margin-top: var(--sp-200);
-  background-color: var(--neutral-100);
   padding-block: var(--sp-200);
-  position: relative;
-  isolation: isolate;
+  color: var(--slate-800);
+  text-decoration: underline var(--slate-800);
+  text-decoration-thickness: 3px;
 }
-
-h1::after {
-  content: '';
-  height: 3px;
-  background-color: var(--teal-900);
-  width: 12%;
-  position: absolute;
-  z-index: 10;
-  bottom: 0;
-  right: 0;
-}
-
-h1::before {
-  content: '';
-  height: 3px;
-  background-color: var(--teal-900);
-  width: 12%;
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
-}
-
 
 @media (max-width: 1472px) {
   main {
