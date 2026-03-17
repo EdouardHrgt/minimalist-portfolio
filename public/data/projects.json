@@ -2,7 +2,14 @@
   {
     "title": "Bookmark Manager",
     "slug": "bookmark-manager",
-    "description": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
+    "description": "Une application qui permet de sauvegarder les sites favoris de l'utilisateur, lui donnant la possibilité d'y ajouter des tags, de copier-coller l'URL automatiquement et de visiter le site. Il est possible de filtrer les favoris parmi toute la liste des tags (générée automatiquement) ou de rechercher un favori depuis la barre de recherche. Il est possible d'ajouter, de modifier, de supprimer un favori ainsi que de l'archiver.",
+    "features": [
+      "Thème Clair / Sombre.",
+      "filtrage par tag / barre de recherche ou par ordre alphabetique.",
+      "Create / Update / Delete / Archived.",
+      "Animations sur les favoris.",
+      "Génération de la liste des tags automatique."
+    ],
     "preview": "/images/projects/portfolio-preview/bookmark-manager.png",
     "detail": {
       "hero": "/images/projects/hero/bookmark-manager-main.jpg",
@@ -19,7 +26,13 @@
   {
     "title": "Finance App",
     "slug": "finance-app",
-    "description": "Fullstack project using for the first time React. I had to learn everything of this library to build this 'fake' Personnal bank Application. I've added some delay over the requests to let users see the loading animation during the datas fetchings. I've created a custom Fetch function that also manage states (loading / Error / datas).",
+    "description": "Projet fullstack utilisant pour la première fois React. J’ai dû apprendre entièrement cette bibliothèque pour créer cette application bancaire personnelle fictive. J’ai ajouté un délai aux requêtes afin de permettre aux utilisateurs de voir l’animation de chargement pendant la récupération des données. J’ai créé une fonction Fetch personnalisée qui gère également les états (loading / error / données).",
+    "features": [
+      "Génération automatique du graphique 'camenbert'.",
+      "Menu lattéral reductible.",
+      "Backend Fonctionnel.",
+      "Gestion d'état: Loading / Error..."
+    ],
     "preview": "/images/projects/portfolio-preview/finance-app.png",
     "detail": {
       "hero": "/images/projects/hero/finance-app-main.jpg",
@@ -30,13 +43,21 @@
     },
     "url": "https://finace-app-edh.netlify.app/",
     "git": "https://github.com/EdouardHrgt/finance-app",
-    "tags": ["React", "Node.js", "Express", "Fullstack"],
+    "tags": ["Fullstack", "React", "Node.js", "Express"],
     "regular": true
   },
   {
     "title": "Weather App",
     "slug": "weather-app",
-    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi blanditiis est distinctio omnis quo. Placeat dolor, at voluptates, atque ipsum neque earum molestias blanditiis exercitationem corporis quos aut tempora sit accusantium odio ut repellat quidem?",
+    "description": "Site web Météorologique par ville recherchée (International). Affichage des données importantes ainsi que les prévisions horaires / journalières. Convertion système métrique / impérial automatique.",
+    "features": [
+      "Contact API externes 'geocoding-api'",
+      "Affichage température et icone associée.",
+      "Prévisions Horaires + choix du jour.",
+      "Prévisions journalières à J+7",
+      "Gestion d'état.",
+      "Choix des unités (métrique / impérial)."
+    ],
     "preview": "/images/projects/portfolio-preview/weather-app.png",
     "detail": {
       "hero": "/images/projects/hero/weather-app-main.jpg",
@@ -47,30 +68,41 @@
     },
     "url": "https://weather-app-edh.netlify.app/",
     "git": "https://github.com/EdouardHrgt/weather-app",
-    "tags": ["Vue.js", "API", "Frontend"],
+    "tags": ["Javascript", "API", "Frontend"],
     "regular": false
   },
   {
-    "title": "Designo",
-    "slug": "designo",
-    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi blanditiis est distinctio omnis quo. Placeat dolor, at voluptates, atque ipsum neque earum molestias blanditiis exercitationem corporis quos aut tempora sit accusantium odio ut repellat quidem?",
-    "preview": "/images/projects/portfolio-preview/designo.png",
+    "title": "Vermintide 2",
+    "slug": "vermintide-2",
+    "description": "Appli crée pour la communauté du jeu vidéo 'Vermintide 2', regroupant toutes les informations sur les personnages et leurs armes pour chaque type de mod.",
+    "preview": "/images/projects/portfolio-preview/vermintide.png",
+    "features": [
+      "choix du personnage et d'un mod.",
+      "affichage des modifications du personnage.",
+      "Focus sur les détails d'une arme.",
+      "Image Fond d'écran Aléatoire (3 versions)."
+    ],
     "detail": {
-      "hero": "/images/projects/hero/designo-main.jpg",
+      "hero": "/images/projects/hero/vermintide-main.jpg",
       "previews": [
-        "/images/projects/sub/designo-sub-2.jpg",
-        "/images/projects/sub/designo-sub-1.jpg"
+        "/images/projects/sub/vermintide-sub-1.jpg",
+        "/images/projects/sub/vermintide-sub-2.jpg"
       ]
     },
-    "url": "https://designo-0website.netlify.app/",
-    "git": "https://github.com/EdouardHrgt/Designo",
-    "tags": ["Vue.js", "Frontend"],
+    "url": "https://vermintide-2-balance-changelogs.netlify.app/",
+    "git": "https://github.com/EdouardHrgt/vt2-balance",
+    "tags": ["Nuxt.js", "Frontend", "JSON"],
     "regular": true
   },
   {
     "title": "MyTeam",
     "slug": "myteam",
-    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi blanditiis est distinctio omnis quo. Placeat dolor, at voluptates, atque ipsum neque earum molestias blanditiis exercitationem corporis quos aut tempora sit accusantium odio ut repellat quidem?",
+    "description": "Site de recrutement au design très riche et complexe. Enormément d'assets ont du être placés minutieusement et ce dans toutes les versions responsives pour PC / Tablette / Mobile.",
+    "features": [
+      "Formulaire avec vérification des champs.",
+      "Design Riche et complexe.",
+      "Versions Responsives."
+    ],
     "preview": "/images/projects/portfolio-preview/myteam.png",
     "detail": {
       "hero": "/images/projects/hero/my-team-main.jpg",
@@ -87,7 +119,8 @@
   {
     "title": "Ip Address Tracker",
     "slug": "ip-address-tracker",
-    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi blanditiis est distinctio omnis quo. Placeat dolor, at voluptates, atque ipsum neque earum molestias blanditiis exercitationem corporis quos aut tempora sit accusantium odio ut repellat quidem?",
+    "description": "Appli permetant de chercher un lieux via une adresse IP. Affichage Dynamique de l'adresse sur une carte internationnale. Possibilité de naviguer sur la carte et de Zoomer / Dézoomer. Tout cela est possible grâce à l'api externe 'geo.ipify.org'.",
+    "features": ["Recherche d'un lieu via son adresse IP.", "Intéraction avec la carte."],
     "preview": "/images/projects/portfolio-preview/ip-address-tracker.webp",
     "detail": {
       "hero": "/images/projects/hero/ip-tracker-main.jpg",
@@ -104,7 +137,13 @@
   {
     "title": "Audiophile",
     "slug": "audiophile",
-    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi blanditiis est distinctio omnis quo. Placeat dolor, at voluptates, atque ipsum neque earum molestias blanditiis exercitationem corporis quos aut tempora sit accusantium odio ut repellat quidem?",
+    "description": "Site E-commerce d'une boutique de produits HI-FI (Casques, Hauts-parleurs, Ecouteurs...). Composé de 4 pages ainsi que le panier client, le récapitulatif et le formulaire de paiement.",
+    "features": [
+      "Ajout / Retrait de produit dans le panier.",
+      "Récapitulatif commande.",
+      "Formulaire d'achat.",
+      "Navigation dynamique avec page produit personnalisée."
+    ],
     "preview": "/images/projects/portfolio-preview/audiophile.png",
     "detail": {
       "hero": "/images/projects/hero/audiophile-main.jpg",
@@ -121,7 +160,7 @@
   {
     "title": "Photosnap",
     "slug": "photosnap",
-    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi blanditiis est distinctio omnis quo. Placeat dolor, at voluptates, atque ipsum neque earum molestias blanditiis exercitationem corporis quos aut tempora sit accusantium odio ut repellat quidem?",
+    "description": "Galerie de photo d'un photographe professionnel composé de 4 pages (Accueil / Histoire / Services / Prix).",
     "preview": "/images/projects/portfolio-preview/photosnap.png",
     "detail": {
       "hero": "/images/projects/hero/photosnap-main.jpg",
@@ -134,5 +173,23 @@
     "git": "https://github.com/EdouardHrgt/photosnap",
     "tags": ["Vue.js", "Frontend"],
     "regular": true
+  },
+  {
+    "title": "Designo",
+    "slug": "designo",
+    "description": "Site web de l'agence créative Designo. 4 pages: Accueil / Agence / Adresses / Contact. Le formulaire est Fonctionnel avec traitement des champs par REGEXP.",
+
+    "preview": "/images/projects/portfolio-preview/designo.png",
+    "detail": {
+      "hero": "/images/projects/hero/designo-main.jpg",
+      "previews": [
+        "/images/projects/sub/designo-sub-2.jpg",
+        "/images/projects/sub/designo-sub-1.jpg"
+      ]
+    },
+    "url": "https://designo-0website.netlify.app/",
+    "git": "https://github.com/EdouardHrgt/Designo",
+    "tags": ["Vue.js", "Frontend"],
+    "regular": false
   }
 ]

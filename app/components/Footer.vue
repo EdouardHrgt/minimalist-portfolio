@@ -1,22 +1,15 @@
 <template>
   <footer>
     <div class="wrapper">
-      <div class="logo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="61" height="32">
-          <path
-            fill-rule="evenodd"
-            d="M60.082 5.878L44.408 32 28.735 5.878h31.347zM15.673 0l15.674 26.122H0L15.673 0z" />
-        </svg>
-      </div>
       <ul class="links">
         <li>
-          <NuxtLink to="/" class="tp-7">home</NuxtLink>
+          <NuxtLink to="/" class="tp-7">Accueil</NuxtLink>
         </li>
         <li>
           <NuxtLink to="/portfolio" class="tp-7">Portfolio</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/contact" class="tp-7">contact me</NuxtLink>
+          <NuxtLink to="/contact" class="tp-7">me contacter</NuxtLink>
         </li>
       </ul>
       <div class="socials flex-align">
@@ -30,13 +23,12 @@
             <path
               d="M24 2.557a9.83 9.83 0 01-2.828.775A4.932 4.932 0 0023.337.608a9.864 9.864 0 01-3.127 1.195A4.916 4.916 0 0016.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 1.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 17.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 2.557z" /></svg
         ></NuxtLink>
-        <NuxtLink to="https://github.com/EdouardHrgt" target="_blank" rel="noopener noreferrer"
+        <NuxtLink to="https://www.linkedin.com/in/edouard-herrengt-446716168/" target="_blank" rel="noopener noreferrer"
           ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <path
               d="M21.6 0H2.4C1.08 0 0 1.08 0 2.4v19.2C0 22.92 1.08 24 2.4 24h19.2c1.32 0 2.4-1.08 2.4-2.4V2.4C24 1.08 22.92 0 21.6 0zM7.2 20.4H3.6V9.6h3.6v10.8zM5.4 7.56c-1.2 0-2.16-.96-2.16-2.16 0-1.2.96-2.16 2.16-2.16 1.2 0 2.16.96 2.16 2.16 0 1.2-.96 2.16-2.16 2.16zm15 12.84h-3.6v-6.36c0-.96-.84-1.8-1.8-1.8-.96 0-1.8.84-1.8 1.8v6.36H9.6V9.6h3.6v1.44c.6-.96 1.92-1.68 3-1.68 2.28 0 4.2 1.92 4.2 4.2v6.84z" /></svg
         ></NuxtLink>
       </div>
-      
     </div>
   </footer>
 </template>
@@ -46,26 +38,13 @@
 <style scoped>
 footer {
   background-color: var(--slate-800);
-  padding-block: var(--sp-250);
+  padding-block: var(--sp-200);
 }
 
 svg {
   fill: var(--neutral-0);
 }
 
-.logo {
-  position: relative;
-  width: 100%;
-  height: 2rem;
-}
-
-.logo svg {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-20%);
-}
-
-.logo,
 .socials,
 .links {
   text-align: center;
@@ -87,17 +66,7 @@ svg {
 .socials {
   gap: var(--sp-100);
   justify-content: center;
-  padding-left: 2.4rem; /* Needed to align on X axis the SVGs... */
-}
-
-.lang {
-  display: flex;
-  gap: 0.75rem;
-}
-
-.lang img {
-  width: 1.5rem;
-  cursor: pointer;
+  padding-left: 2.35rem; /* Needed to align on X axis the SVGs... */
 }
 
 @media (hover: hover) {
@@ -118,19 +87,14 @@ svg {
 @media (min-width: 768px) {
   footer {
     padding-inline: var(--sp-200);
+    padding-block: var(--sp-400);
   }
   .wrapper {
     display: flex;
     align-items: center;
     max-width: var(--mx-width);
-    padding-inline: 13px 0;
     margin-inline: auto;
-  }
-  .logo {
-    width: fit-content;
-  }
-  .logo svg {
-    position: static;
+    justify-content: space-between;
   }
   .socials {
     padding-left: 0;
@@ -140,7 +104,6 @@ svg {
     display: flex;
     gap: var(--sp-100);
     padding: 0;
-    margin-left: var(--sp-200);
   }
   .links li a {
     margin-bottom: 0;

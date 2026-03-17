@@ -1,10 +1,10 @@
 <template>
   <section class="contact">
-    <h3 class="tp-2">Interested in doing a project together?</h3>
+    <h3 class="tp-2">Travaillons ensemble !</h3>
     <span class="contact-line"></span>
 
     <NuxtLink to="/contact"
-      ><Button label="contact me" :primary="false" @click="toContact"
+      ><Button label="me contacter" :primary="false" @click="toContact"
     /></NuxtLink>
   </section>
 </template>
@@ -25,10 +25,6 @@ const toContact = () => {}
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.contact h3 {
-  max-width: 350px;
 }
 
 .contact-line {

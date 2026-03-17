@@ -2,8 +2,8 @@
   <main>
     <section class="presentation">
       <div class="presentation-txt">
-        <h1 class="tp-1">Hey, I’m Edouard and I love building beautiful websites</h1>
-        <Button label="See My CV" :primary="true" file="/cv.pdf" />
+        <h1 class="tp-1">Bonjour, je suis Édouard, créateur de sites web à votre image.</h1>
+        <Button label="Voir mon CV" :primary="true" file="/cv.pdf" />
       </div>
     </section>
 
@@ -15,16 +15,18 @@
       </div>
 
       <div class="about-txt">
-        <h2 class="tp-2">About Me</h2>
+        <h2 class="tp-2">Qui suis-je ?</h2>
         <p class="tp-4">
-          I’m a front-end developer looking for a new role in an exciting company. I focus on
-          writing accessible HTML, using modern CSS practices and writing clean JavaScript. When
-          writing JavaScript code, I mostly use Vue.js / Nuxt, but I can adapt to whatever tools are
-          required. I’m based in Lille France, but I’m happy working remotely and have experience in
-          remote teams. When I’m not coding, you’ll find me outdoors. I love being out in nature
-          whether that’s going for a walk or cycling. I’d love you to check out my work.
+          Je suis un développeur front-end à la recherche d’un nouveau poste dans une entreprise
+          stimulante. Je me concentre sur l’écriture d’un HTML accessible, l’utilisation de
+          pratiques CSS modernes et la rédaction d’un JavaScript propre et maintenable. Lorsque
+          j’écris du code JavaScript, j’utilise principalement Vue.js / Nuxt, mais je peux m’adapter
+          aux outils nécessaires. Je suis basé à Lille, en France, mais je suis tout à fait à l’aise
+          avec le travail à distance et j’ai de l’expérience dans des équipes en remote.<br />Quand
+          je ne code pas, vous me trouverez à faire de la musique ou des sorties en vélo. N’hésitez
+          pas à jeter un œil à mon travail.
         </p>
-        <NuxtLink to="/portfolio"><Button label="go to portfolio" :primary="false" /></NuxtLink>
+        <NuxtLink to="/portfolio"><Button label="Voir mon Portfolio" :primary="false" /></NuxtLink>
       </div>
     </section>
     <ContactMe />
@@ -78,8 +80,8 @@ h1 {
 }
 
 .about-txt {
-  max-width: 350px;
-  padding-top: var(--sp-200);
+  max-width: 400px;
+  padding-block: var(--sp-200);
   border-top: 1px solid var(--slate-300);
   border-bottom: 1px solid var(--slate-300);
 }

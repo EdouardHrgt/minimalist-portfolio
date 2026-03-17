@@ -69,21 +69,18 @@ onMounted(() => {
             </li>
           </ul>
           <div class="btns-wrapper flex-align">
-            <Button label="Visit Website" @click="goTo(project.url)" />
-            <Button label="see Git Repo" :primary="true" @click="goTo(project.git)" />
+            <Button label="Voir le site" @click="goTo(project.url)" />
+            <Button label="Voir le Git" :primary="true" @click="goTo(project.git)" />
           </div>
         </div>
         <div class="right-col">
-          <h2 class="tp-3">Project Background</h2>
-          <p class="tp-5">
-            This project was a front-end challenge from Frontend Mentor. It's a platform that
-            enables you to practice building websites to a design and project brief. Each challenge
-            includes mobile and desktop designs to show how the website should look at different
-            screen sizes. Creating these projects has helped me refine my workflow and solve
-            real-world coding problems. I've learned something new with each project, helping me to
-            improve and adapt my style.
-          </p>
-          <h2 class="tp-3">Static Previews</h2>
+          <div class="features" v-if="project.features">
+            <h2 class="tp-3">Fonctionnalités principales :</h2>
+            <ul v-if="project.features">
+              <li class="tp-5" v-for="(feat, i) in project.features" :key="i">{{ feat }}</li>
+            </ul>
+          </div>
+          <h2 class="tp-3">Aperçus statiques :</h2>
           <div
             v-if="project.detail"
             v-for="image in project.detail.previews"
@@ -107,7 +104,7 @@ onMounted(() => {
           </svg>
           <div class="carousel-txt">
             <h3 class="tp-3">{{ prevProject?.title ?? '—' }}</h3>
-            <p class="tp-4 carousel-txt-p">Previous Project</p>
+            <p class="tp-4 carousel-txt-p">Projet précédent</p>
           </div>
         </div>
 
@@ -117,7 +114,7 @@ onMounted(() => {
           @click="nextProject && navigateTo(nextProject.slug, 'left')">
           <div class="carousel-txt">
             <h3 class="tp-3">{{ nextProject?.title ?? '—' }}</h3>
-            <p class="tp-4 carousel-txt-p">Next Project</p>
+            <p class="tp-4 carousel-txt-p">Projet suivant</p>
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16">
             <path fill="none" stroke="#33323D" d="M1 0l8 8-8 8" />
@@ -130,6 +127,10 @@ onMounted(() => {
 </template>
 
 <style scoped>
+* {
+  color: var(--slate-800);
+}
+
 /* HERO BANNER IMAGE */
 .project-header {
   overflow: hidden;
@@ -159,8 +160,6 @@ onMounted(() => {
   opacity: 0;
   position: absolute;
 }
-
-
 
 @keyframes shimmer {
   0% {
@@ -214,8 +213,20 @@ onMounted(() => {
   max-width: 750px;
 }
 
-.right-col p {
+.right-col ul {
   margin-block: var(--sp-150);
+  padding: 0;
+  padding-left: 1.35rem;
+}
+
+.right-col ul li {
+  list-style-type: disc;
+  color: var(--slate-800);
+  font-weight: 500;
+}
+
+.right-col ul li:nth-child(2n) {
+  color: var(--slate-700);
 }
 
 .project-preview {
@@ -240,6 +251,10 @@ onMounted(() => {
 
 .carousel-txt-p {
   color: var(--slate-300);
+}
+
+.carousel h3 {
+  color: var(--teal-900);
 }
 
 .carousel h3,

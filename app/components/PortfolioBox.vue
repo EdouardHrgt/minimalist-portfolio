@@ -8,7 +8,7 @@
       <p class="tp-4">
         {{ data.description }}
       </p>
-      <Button label="view project" :primary="false" @click="navigateToProject" />
+      <Button label="Voir le projet" :primary="false" @click="navigateToProject" />
     </div>
   </article>
   <span v-else class="tp-5">An error occured while loading projects...</span>

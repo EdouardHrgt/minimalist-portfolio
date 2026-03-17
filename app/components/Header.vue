@@ -3,17 +3,17 @@
     <div v-if="isOpen" class="overlay" @click="isOpen = false" />
   </Transition>
   <header class="flex-align container">
-    <img src="/images/logo.svg" alt="Logo of the Portfolio" class="logo" />
+    <img src="/images/logo.svg" alt="Logo of the Portfolio"  />
     <nav>
       <ul class="flex-align-justify" :class="{ active: isOpen }">
         <li>
-          <NuxtLink to="/" class="tp-7" @click="closeMenu">home</NuxtLink>
+          <NuxtLink to="/" class="tp-7" @click="closeMenu">Accueil</NuxtLink>
         </li>
         <li>
           <NuxtLink to="/portfolio" class="tp-7" @click="closeMenu">Portfolio</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/contact" class="tp-7" @click="closeMenu">contact me</NuxtLink>
+          <NuxtLink to="/contact" class="tp-7" @click="closeMenu">Me contacter</NuxtLink>
         </li>
       </ul>
     </nav>

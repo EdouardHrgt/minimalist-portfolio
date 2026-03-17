@@ -1,15 +1,15 @@
 <template>
   <main class="container">
     <section class="touch">
-      <h1 class="tp-2">Get in Touch</h1>
+      <h1 class="tp-2">Me contacter</h1>
       <div class="text">
         <p class="tp-4">
-          I’d love to hear about what you’re working on and how I could help. I’m currently looking
-          for a new role and am open to a wide range of opportunities. My preference would be to
-          find a position in a company in France. But I’m also happy to hear about opportunites that
-          don’t fit that description. I’m a hard-working and positive person who will always
-          approach each task with a sense of purpose and attention to detail. Please do feel free to
-          check out my online profiles below and get in touch using the form.
+          Vous souhaitez collaborer ou discuter d’un projet ? N’hésitez pas à m’envoyer un message
+          via ce formulaire.
+        </p>
+        <p class="tp-4">
+          Je suis actuellement à la recherche de nouvelles missions et je vous répondrai dans les
+          plus brefs délais.
         </p>
         <div class="socials flex-align">
           <NuxtLink to="https://github.com/EdouardHrgt" target="_blank" rel="noopener noreferrer"
@@ -22,7 +22,7 @@
               <path
                 d="M24 2.557a9.83 9.83 0 01-2.828.775A4.932 4.932 0 0023.337.608a9.864 9.864 0 01-3.127 1.195A4.916 4.916 0 0016.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 1.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 17.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 2.557z" /></svg
           ></NuxtLink>
-          <NuxtLink to="https://github.com/EdouardHrgt" target="_blank" rel="noopener noreferrer"
+          <NuxtLink to="https://www.linkedin.com/in/edouard-herrengt-446716168/" target="_blank" rel="noopener noreferrer"
             ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
               <path
                 d="M21.6 0H2.4C1.08 0 0 1.08 0 2.4v19.2C0 22.92 1.08 24 2.4 24h19.2c1.32 0 2.4-1.08 2.4-2.4V2.4C24 1.08 22.92 0 21.6 0zM7.2 20.4H3.6V9.6h3.6v10.8zM5.4 7.56c-1.2 0-2.16-.96-2.16-2.16 0-1.2.96-2.16 2.16-2.16 1.2 0 2.16.96 2.16 2.16 0 1.2-.96 2.16-2.16 2.16zm15 12.84h-3.6v-6.36c0-.96-.84-1.8-1.8-1.8-.96 0-1.8.84-1.8 1.8v6.36H9.6V9.6h3.6v1.44c.6-.96 1.92-1.68 3-1.68 2.28 0 4.2 1.92 4.2 4.2v6.84z" /></svg
@@ -31,7 +31,6 @@
       </div>
     </section>
     <section class="contact">
-      <h2 class="tp-2">Contact Me</h2>
       <form @submit.prevent="handleSubmit">
         <input
           type="text"
@@ -42,26 +41,26 @@
           autocomplete="off" />
 
         <div class="form-group">
-          <label for="name" class="tp-6-bold">Name</label>
+          <label for="name" class="tp-6-bold">Nom</label>
           <input
             v-model="form.name"
             type="text"
             name="name"
             id="name"
             required
-            placeholder="The Big Lebowski"
+            placeholder="Juste Leblanc"
             class="tp-6" />
         </div>
 
         <div class="form-group">
-          <label for="email" class="tp-6-bold">Email Address</label>
+          <label for="email" class="tp-6-bold">Adresse Email</label>
           <input
             v-model="form.email"
             type="email"
             name="email"
             id="email"
             required
-            placeholder="email@example.com"
+            placeholder="email@exemple.fr"
             class="tp-6" />
         </div>
 
@@ -71,7 +70,7 @@
             v-model="form.message"
             name="message"
             id="message"
-            placeholder="How can I help?"
+            placeholder="Comment puis-je vous aider ?"
             minlength="20"
             required
             class="tp-6" />
@@ -80,16 +79,15 @@
         <div class="form-group">
           <input
             type="submit"
-            :value="status === 'loading' ? 'SENDING...' : 'SEND MESSAGE'"
+            :value="status === 'loading' ? 'Envoi en cours...' : 'ENVOYER LE MESSAGE'"
             :disabled="status === 'loading'"
             class="tp-7 submit" />
           <!-- FEEDBACK MESSAGES -->
           <p v-if="status === 'success'" class="form-success">
-            ✅ Your message has been sent successfully, I'll get back to you as soon as possible,
-            thank you.!
+            ✅ Votre message a bien été envoyé, Je vous recontacterai rapidement!
           </p>
           <p v-if="status === 'error'" class="form-error">
-            ❌ Something went wrong. Please try again.
+            ❌ Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer.
           </p>
         </div>
       </form>
@@ -170,15 +168,13 @@ main {
 
 /* SECOND SECTION */
 .contact {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
   padding-block: var(--sp-300);
 }
 
 .contact form {
   max-width: 635px;
   width: 100%;
+  margin-left: auto;
 }
 
 .form-group {
@@ -244,10 +240,8 @@ textarea {
     gap: var(--sp-100);
   }
 
-  .contact {
-    flex-direction: column;
-    justify-content: start;
-    gap: var(--sp-100);
+  .contact form {
+    margin-left: 0;
   }
 
   .contact form,
