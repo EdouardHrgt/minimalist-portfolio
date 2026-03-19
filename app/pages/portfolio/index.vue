@@ -42,6 +42,7 @@ h1 {
   text-transform: uppercase;
   color: var(--teal-900);
   padding-block: var(--sp-200);
+  padding-left: var(--sp-100);
   display: block;
   font-family: 'Public Sans', sans-serif;
   background-color: var(--neutral-0);
@@ -51,6 +52,7 @@ h1 {
   line-height: 115%;
   z-index: 10;
   padding-right: var(--sp-100);
+  font-family: "Archivo Black", sans-serif;
 }
 
 .header::after {

@@ -2,7 +2,10 @@
   <main>
     <section class="presentation">
       <div class="presentation-txt">
-        <h1 class="tp-1">Bonjour, je suis Édouard, créateur de sites web à votre image.</h1>
+        <h1 class="tp-1">
+          <span>Bonjour ! </span>
+          je suis Édouard, créateur de sites web à votre image.
+        </h1>
         <Button label="Voir mon CV" :primary="true" file="/cv.pdf" />
       </div>
     </section>
@@ -10,11 +13,9 @@
     <section class="about-me">
       <picture class="photo">
         <source srcset="/images/homepage/mobile/profil.jpg" media="(max-width: 768px)" />
-        <NuxtImg
+        <img
           src="/images/homepage/desktop/profil.webp"
-          alt="Photography Of Edouard Herrengt, Web Developper"
-          format="webp"
-          loading="eager" />
+          alt="Photography Of Edouard Herrengt, Web Developper" />
       </picture>
 
       <div class="about-txt">
@@ -70,13 +71,21 @@ useSeoMeta({
 
 .presentation-txt {
   background-color: var(--neutral-0);
-  max-width: 475px;
+  max-width: 540px;
   padding-top: var(--sp-250);
+  padding-left: var(--sp-100);
 }
 
 h1 {
   display: block;
   margin-bottom: var(--sp-250);
+}
+
+h1 span {
+  display: block;
+  margin-bottom: 12px;
+  font-family: "Archivo Black", sans-serif;
+  color: var(--teal-900);
 }
 
 /* ABOUT ME SECTION */
@@ -159,6 +168,7 @@ h1 {
     width: 100%;
     padding-top: var(--sp-150);
     text-align: center;
+    padding-left: 0;
   }
   .presentation-txt button {
     margin-inline: auto;
