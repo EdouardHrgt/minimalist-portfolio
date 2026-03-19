@@ -3,7 +3,7 @@
     <div v-if="isOpen" class="overlay" @click="isOpen = false" />
   </Transition>
   <header class="flex-align container">
-    <img src="/images/logo.svg" alt="Logo of the Portfolio"  />
+    <img src="/images/logo.jpg" alt="Logo of the Portfolio" />
     <nav>
       <ul class="flex-align-justify" :class="{ active: isOpen }">
         <li>
@@ -88,16 +88,19 @@ li a {
 }
 
 @media (max-width: 768px) {
+  header {
+    padding-block: var(--sp-150);
+  }
   .menu {
     display: block;
   }
 
   ul {
-    background-color: var(--slate-800);
+    background: linear-gradient(180deg, var(--teal-950) 0%, var(--teal-900) 100%);
     position: absolute;
     right: -100rem;
-    top: 7.99rem;
-    width: 60%;
+    top: 6rem;
+    width: 70%;
     padding-block: var(--sp-500);
     z-index: 1000;
     flex-direction: column;
@@ -113,7 +116,7 @@ li a {
   }
 
   ul.active {
-    right: 1rem;
+    right: 0rem;
   }
 
   .overlay {
