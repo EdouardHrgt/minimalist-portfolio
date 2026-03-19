@@ -2,19 +2,15 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   css: ['./assets/style.css'],
-  modules: ['@nuxtjs/sitemap', '@nuxt/image','@nuxtjs/robots'],
+  modules: ['@nuxtjs/sitemap', '@nuxt/image'],
   site: {
     url: 'https://edouard-herrengt.com',
   },
   app: {
     head: {
       htmlAttrs: { lang: 'fr' },
-      link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-      ],
-      meta: [
-        { name: 'theme-color', content: '#0f172a' },
-      ],
+      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+      meta: [{ name: 'theme-color', content: '#0f172a' }],
     },
   },
   image: {
@@ -22,16 +18,16 @@ export default defineNuxtConfig({
     format: ['webp'],
   },
   sitemap: {
-  urls: [
-    '/portfolio/bookmark-manager',
-    '/portfolio/finance-app',
-    '/portfolio/weather-app',
-    '/portfolio/vermintide-2',
-    '/portfolio/myteam',
-    '/portfolio/ip-address-tracker',
-    '/portfolio/audiophile',
-    '/portfolio/photosnap',
-    '/portfolio/designo',
-  ],
-}
+    urls: [
+      '/portfolio/bookmark-manager',
+      '/portfolio/finance-app',
+      '/portfolio/weather-app',
+      '/portfolio/vermintide-2',
+      '/portfolio/myteam',
+      '/portfolio/ip-address-tracker',
+      '/portfolio/audiophile',
+      '/portfolio/photosnap',
+      '/portfolio/designo',
+    ],
+  },
 })

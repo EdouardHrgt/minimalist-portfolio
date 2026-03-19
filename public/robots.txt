@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://edouard-herrengt.com/sitemap.xml
