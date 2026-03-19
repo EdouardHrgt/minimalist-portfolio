@@ -1,12 +1,12 @@
 <template>
   <article v-if="data" :class="{ regular: data.regular }">
     <div class="mockups">
-      <img :src="data.preview" :alt="data.title" />
+      <NuxtImg :src="data.preview" :alt="data.title" format="webp" loading="lazy" />
     </div>
     <div class="description">
       <h2 class="tp-2">{{ data.title }}</h2>
       <p class="tp-4">
-        {{ data.description }}
+        {{ data.summary }}
       </p>
       <Button label="Voir le projet" :primary="false" @click="navigateToProject" />
     </div>

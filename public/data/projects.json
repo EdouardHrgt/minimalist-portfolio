@@ -2,7 +2,7 @@
   {
     "title": "Bookmark Manager",
     "slug": "bookmark-manager",
-    "description": "Une application qui permet de sauvegarder les sites favoris de l'utilisateur, lui donnant la possibilité d'y ajouter des tags, de copier-coller l'URL automatiquement et de visiter le site. Il est possible de filtrer les favoris parmi toute la liste des tags (générée automatiquement) ou de rechercher un favori depuis la barre de recherche. Il est possible d'ajouter, de modifier, de supprimer un favori ainsi que de l'archiver.",
+    "summary": "Une application qui permet de sauvegarder les sites favoris de l'utilisateur, lui donnant la possibilité d'y ajouter des tags, de copier-coller l'URL automatiquement et de visiter le site. Il est possible de filtrer les favoris parmi toute la liste des tags (générée automatiquement) ou de rechercher un favori depuis la barre de recherche. Il est possible d'ajouter, de modifier, de supprimer un favori ainsi que de l'archiver.",
     "features": [
       "Thème Clair / Sombre.",
       "filtrage par tag / barre de recherche ou par ordre alphabetique.",
@@ -26,7 +26,7 @@
   {
     "title": "Finance App",
     "slug": "finance-app",
-    "description": "Projet fullstack utilisant pour la première fois React. J’ai dû apprendre entièrement cette bibliothèque pour créer cette application bancaire personnelle fictive. J’ai ajouté un délai aux requêtes afin de permettre aux utilisateurs de voir l’animation de chargement pendant la récupération des données. J’ai créé une fonction Fetch personnalisée qui gère également les états (loading / error / données).",
+    "summary": "Projet fullstack utilisant pour la première fois React. J’ai dû apprendre entièrement cette bibliothèque pour créer cette application bancaire personnelle fictive. J’ai ajouté un délai aux requêtes afin de permettre aux utilisateurs de voir l’animation de chargement pendant la récupération des données. J’ai créé une fonction Fetch personnalisée qui gère également les états (loading / error / données).",
     "features": [
       "Génération automatique du graphique 'camenbert'.",
       "Menu lattéral reductible.",
@@ -49,7 +49,7 @@
   {
     "title": "Weather App",
     "slug": "weather-app",
-    "description": "Site web Météorologique par ville recherchée (International). Affichage des données importantes ainsi que les prévisions horaires / journalières. Convertion système métrique / impérial automatique.",
+    "summary": "Site web Météorologique par ville recherchée (International). Affichage des données importantes ainsi que les prévisions horaires / journalières. Convertion système métrique / impérial automatique.",
     "features": [
       "Contact API externes 'geocoding-api'",
       "Affichage température et icone associée.",
@@ -74,7 +74,7 @@
   {
     "title": "Vermintide 2",
     "slug": "vermintide-2",
-    "description": "Appli crée pour la communauté du jeu vidéo 'Vermintide 2', regroupant toutes les informations sur les personnages et leurs armes pour chaque type de mod.",
+    "summary": "Appli crée pour la communauté du jeu vidéo 'Vermintide 2', regroupant toutes les informations sur les personnages et leurs armes pour chaque type de mod.",
     "preview": "/images/projects/portfolio-preview/vermintide.png",
     "features": [
       "choix du personnage et d'un mod.",
@@ -97,7 +97,7 @@
   {
     "title": "MyTeam",
     "slug": "myteam",
-    "description": "Site de recrutement au design très riche et complexe. Enormément d'assets ont du être placés minutieusement et ce dans toutes les versions responsives pour PC / Tablette / Mobile.",
+    "summary": "Site de recrutement au design très riche et complexe. Enormément d'assets ont du être placés minutieusement et ce dans toutes les versions responsives pour PC / Tablette / Mobile.",
     "features": [
       "Formulaire avec vérification des champs.",
       "Design Riche et complexe.",
@@ -119,7 +119,7 @@
   {
     "title": "Ip Address Tracker",
     "slug": "ip-address-tracker",
-    "description": "Appli permetant de chercher un lieux via une adresse IP. Affichage Dynamique de l'adresse sur une carte internationnale. Possibilité de naviguer sur la carte et de Zoomer / Dézoomer. Tout cela est possible grâce à l'api externe 'geo.ipify.org'.",
+    "summary": "Appli permetant de chercher un lieux via une adresse IP. Affichage Dynamique de l'adresse sur une carte internationnale. Possibilité de naviguer sur la carte et de Zoomer / Dézoomer. Tout cela est possible grâce à l'api externe 'geo.ipify.org'.",
     "features": ["Recherche d'un lieu via son adresse IP.", "Intéraction avec la carte."],
     "preview": "/images/projects/portfolio-preview/ip-address-tracker.webp",
     "detail": {
@@ -137,7 +137,7 @@
   {
     "title": "Audiophile",
     "slug": "audiophile",
-    "description": "Site E-commerce d'une boutique de produits HI-FI (Casques, Hauts-parleurs, Ecouteurs...). Composé de 4 pages ainsi que le panier client, le récapitulatif et le formulaire de paiement.",
+    "summary": "Site E-commerce d'une boutique de produits HI-FI (Casques, Hauts-parleurs, Ecouteurs...). Composé de 4 pages ainsi que le panier client, le récapitulatif et le formulaire de paiement.",
     "features": [
       "Ajout / Retrait de produit dans le panier.",
       "Récapitulatif commande.",
@@ -160,7 +160,7 @@
   {
     "title": "Photosnap",
     "slug": "photosnap",
-    "description": "Galerie de photo d'un photographe professionnel composé de 4 pages (Accueil / Histoire / Services / Prix).",
+    "summary": "Galerie de photo d'un photographe professionnel composé de 4 pages (Accueil / Histoire / Services / Prix).",
     "preview": "/images/projects/portfolio-preview/photosnap.png",
     "detail": {
       "hero": "/images/projects/hero/photosnap-main.jpg",
@@ -177,7 +177,7 @@
   {
     "title": "Designo",
     "slug": "designo",
-    "description": "Site web de l'agence créative Designo. 4 pages: Accueil / Agence / Adresses / Contact. Le formulaire est Fonctionnel avec traitement des champs par REGEXP.",
+    "summary": "Site web de l'agence créative Designo. 4 pages: Accueil / Agence / Adresses / Contact. Le formulaire est Fonctionnel avec traitement des champs par REGEXP.",
 
     "preview": "/images/projects/portfolio-preview/designo.png",
     "detail": {

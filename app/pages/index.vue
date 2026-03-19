@@ -8,11 +8,14 @@
     </section>
 
     <section class="about-me">
-      <div class="photo">
-        <img
-          src="/images/homepage/desktop/Photo-Edouard.jpg"
-          alt="Photography Of Edouard Herrengt, Web Developper" />
-      </div>
+      <picture class="photo">
+        <source srcset="/images/homepage/mobile/profil.jpg" media="(max-width: 768px)" />
+        <NuxtImg
+          src="/images/homepage/desktop/profil.webp"
+          alt="Photography Of Edouard Herrengt, Web Developper"
+          format="webp"
+          loading="eager" />
+      </picture>
 
       <div class="about-txt">
         <h2 class="tp-2">Qui suis-je ?</h2>
@@ -33,7 +36,18 @@
   </main>
 </template>
 
-<script setup></script>
+<script setup>
+useSeoMeta({
+  title: 'Edouard Herrengt — Développeur Frontend Vue / Nuxt',
+  description:
+    'Portfolio de Edouard Herrengt, développeur frontend spécialisé Vue.js et Nuxt, basé à Lille.',
+  ogTitle: 'Edouard Herrengt — Développeur Frontend',
+  ogDescription: 'Découvrez mes projets Vue / Nuxt...',
+  ogImage: '/og-image.jpg',
+  ogUrl: 'https://edouard-herrengt.com/',
+  twitterCard: 'summary_large_image',
+})
+</script>
 
 <style scoped>
 .presentation,
@@ -45,7 +59,7 @@
 
 /* PRESENTATION SECTION */
 .presentation {
-  background-image: url(/images/homepage/desktop/image-homepage-hero@2x.jpg);
+  background-image: url(/images/homepage/desktop/hero-homepage.webp);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 600px;
@@ -112,7 +126,7 @@ h1 {
 
 @media (max-width: 1024px) {
   .presentation {
-    background-image: url(/images/homepage/tablet/image-homepage-hero@2x.jpg);
+    background-image: url(/images/homepage/tablet/hero-homepage.webp);
   }
   .contact-line {
     max-width: unset;
@@ -127,13 +141,16 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  .photo {
+    width: 90%;
+  }
   .presentation,
   .about-me,
   .contact {
     margin-inline: var(--sp-100);
   }
   .presentation {
-    background-image: url(/images/homepage/mobile/image-homepage-hero@2x.jpg);
+    background-image: url(/images/homepage/mobile/hero-homepage.webp);
     background-position: center;
     margin-bottom: var(--sp-200);
   }

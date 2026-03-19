@@ -23,6 +23,5 @@
 .page-wrapper {
   position: relative;
   overflow: hidden;
-  min-height: 100dvh;
 }
 </style>

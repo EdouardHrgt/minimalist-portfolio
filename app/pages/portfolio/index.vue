@@ -1,11 +1,18 @@
 <script setup>
 const { data: projects } = await useFetch('/data/projects.json')
+useSeoMeta({
+  title: 'Portfolio — Edouard Herrengt',
+  description: 'Découvrez mes projets frontend réalisés avec Vue.js et Nuxt.',
+  ogTitle: 'Portfolio — Edouard Herrengt',
+  ogDescription: 'Découvrez mes projets frontend réalisés avec Vue.js et Nuxt.',
+  ogUrl: 'https://edouard-herrengt.com/portfolio',
+})
 </script>
 
 <template>
   <main v-if="projects">
     <div class="header">
-      <h1 class="tp-1">Mes projets perso</h1>
+      <h1 class="tp-1">Mes projets <span>perso</span></h1>
     </div>
     <PortfolioBox v-for="project in projects" :key="project.title" :data="project" />
   </main>
@@ -20,7 +27,7 @@ main {
 }
 
 .header {
-  background-image: url('/images/homepage/desktop/portfolio-header.jpg');
+  background-image: url('/images/homepage/desktop/portfolio-header.webp');
   background-repeat: no-repeat;
   height: 350px;
   background-size: cover;

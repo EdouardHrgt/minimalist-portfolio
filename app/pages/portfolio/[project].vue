@@ -41,6 +41,47 @@ const goTo = (url) => {
 onMounted(() => {
   isVisible.value = true
 })
+
+// SEO
+const fullUrl = computed(() => `https://edouard-herrengt.com/portfolio/${project.value?.slug}`)
+const heroImage = computed(() => `https://edouard-herrengt.com${project.value?.detail?.hero}`)
+
+useSeoMeta({
+  title: () => `${project.value?.title} — Edouard Herrengt`,
+  description: () => project.value?.summary,
+  ogTitle: () => `${project.value?.title} — Edouard Herrengt`,
+  ogDescription: () => project.value?.summary,
+  ogImage: () => heroImage.value,
+  ogUrl: () => fullUrl.value,
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterImage: () => heroImage.value,
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: () => fullUrl.value }], // ← un seul useHead
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: () =>
+        JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'CreativeWork',
+          name: project.value?.title,
+          description: project.value?.summary,
+          url: project.value?.url,
+          image: heroImage.value,
+          keywords: project.value?.tags?.join(', '),
+          codeRepository: project.value?.git,
+          author: {
+            '@type': 'Person',
+            name: 'Edouard Herrengt',
+            url: 'https://edouard-herrengt.com',
+          },
+        }),
+    },
+  ],
+})
 </script>
 
 <template>
@@ -49,11 +90,13 @@ onMounted(() => {
       <!-- MAIN PROJECT'S IMAGE (HERO) -->
       <section class="project-header">
         <div v-if="!heroLoaded" class="hero-skeleton" />
-        <img
+        <NuxtImg
           :src="project.detail.hero"
           :alt="project.title"
           :class="{ 'hero-hidden': !heroLoaded }"
-          @load="heroLoaded = true" />
+          @load="heroLoaded = true"
+          format="webp"
+          loading="lazy" />
         <!-- Canva: 1440 x 640 || Image: 1100 x 550 -->
       </section>
 
@@ -61,7 +104,7 @@ onMounted(() => {
       <section class="project-detail">
         <div class="left-col border-block">
           <h1 class="tp-2">{{ project.title }}</h1>
-          <p class="tp-5">{{ project.description }}</p>
+          <p class="tp-5">{{ project.summary }}</p>
 
           <ul class="tags">
             <li class="tp-6-bold" v-for="tag in project.tags" :key="tag" v-if="project.tags">
@@ -85,7 +128,7 @@ onMounted(() => {
             v-if="project.detail"
             v-for="image in project.detail.previews"
             class="project-preview">
-            <img :src="image" :alt="project.title" />
+            <NuxtImg :src="image" :alt="project.title" format="webp" loading="lazy" />
             <!-- IMAGES: 750 x 370-->
           </div>
         </div>
