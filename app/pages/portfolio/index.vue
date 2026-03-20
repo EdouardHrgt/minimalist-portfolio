@@ -35,6 +35,8 @@ main {
   margin-bottom: var(--sp-500);
   position: relative;
   isolation: isolate;
+  opacity: 0;
+  animation: appear 1s forwards ease;
 }
 
 h1 {
@@ -52,7 +54,7 @@ h1 {
   line-height: 115%;
   z-index: 10;
   padding-right: var(--sp-100);
-  font-family: "Archivo Black", sans-serif;
+  font-family: 'Archivo Black', sans-serif;
 }
 
 .header::after {

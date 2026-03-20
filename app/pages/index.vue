@@ -3,7 +3,7 @@
     <section class="presentation">
       <div class="presentation-txt">
         <h1 class="tp-1">
-          <span>Bonjour ! </span>
+          <span>Bonjour !</span>
           je suis Édouard, créateur de sites web à votre image.
         </h1>
         <Button label="Voir mon CV" :primary="true" file="/cv.pdf" />
@@ -67,6 +67,8 @@ useSeoMeta({
   display: flex;
   flex-direction: column;
   justify-content: end;
+  opacity: 0;
+  animation: appear 1s forwards ease;
 }
 
 .presentation-txt {
@@ -84,7 +86,7 @@ h1 {
 h1 span {
   display: block;
   margin-bottom: 12px;
-  font-family: "Archivo Black", sans-serif;
+  font-family: 'Archivo Black', sans-serif;
   color: var(--teal-900);
 }
 
@@ -169,6 +171,7 @@ h1 span {
     padding-top: var(--sp-150);
     text-align: center;
     padding-left: 0;
+    filter: drop-shadow(0px -5px 3px #b8b8b8);
   }
   .presentation-txt button {
     margin-inline: auto;

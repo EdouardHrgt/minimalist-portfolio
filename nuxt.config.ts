@@ -2,7 +2,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   css: ['./assets/style.css'],
-  modules: ['@nuxtjs/sitemap', '@nuxt/image'],
+  modules: ['@nuxtjs/sitemap'],
 
   site: {
     url: 'https://edouard-herrengt.com',

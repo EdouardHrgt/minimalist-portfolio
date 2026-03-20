@@ -1,7 +1,7 @@
 <template>
-  <article v-if="data" :class="{ regular: data.regular }">
+  <article v-if="data" :class="{ regular: data.regular }" class="animate-on-scroll">
     <div class="mockups">
-      <NuxtImg :src="data.preview" :alt="data.title" format="webp" loading="lazy" />
+      <img :src="data.preview" :alt="data.title" />
     </div>
     <div class="description">
       <h2 class="tp-2">{{ data.title }}</h2>

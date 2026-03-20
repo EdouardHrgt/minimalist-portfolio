@@ -3,7 +3,8 @@
     <div v-if="isOpen" class="overlay" @click="isOpen = false" />
   </Transition>
   <header class="flex-align container">
-    <img src="/images/logo.jpg" alt="Logo of the Portfolio" />
+    <!-- <img src="/images/logo.jpg" alt="Logo of the Portfolio" /> -->
+    <Logo :isDark="true" />
     <nav>
       <ul class="flex-align-justify" :class="{ active: isOpen }">
         <li>
@@ -96,17 +97,18 @@ li a {
   }
 
   ul {
-    background: linear-gradient(180deg, var(--teal-950) 0%, var(--teal-900) 100%);
+    --top-distance: 5.8rem;
+    background: linear-gradient(180deg, var(--blue-950) 0%, var(--blue-400) 100%);
     position: absolute;
     right: -100rem;
-    top: 6rem;
+    top: var(--top-distance);
     width: 70%;
     padding-block: var(--sp-500);
     z-index: 1000;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    height: 70vh;
+    height: calc(100dvh - 5.8rem);
     padding-left: 0;
     transition: right 0.2s ease-out;
   }

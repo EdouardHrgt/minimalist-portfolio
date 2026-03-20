@@ -152,6 +152,8 @@ const handleSubmit = async () => {
 /* FULL PAGE */
 main {
   overflow-x: hidden;
+  opacity: 0;
+  animation: appear 1s forwards ease;
 }
 
 /* FIRST SECTION */

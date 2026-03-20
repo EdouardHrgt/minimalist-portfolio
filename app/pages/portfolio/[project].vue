@@ -90,19 +90,17 @@ useHead({
       <!-- MAIN PROJECT'S IMAGE (HERO) -->
       <section class="project-header">
         <div v-if="!heroLoaded" class="hero-skeleton" />
-        <NuxtImg
+        <img
           :src="project.detail.hero"
           :alt="project.title"
           :class="{ 'hero-hidden': !heroLoaded }"
-          @load="heroLoaded = true"
-          format="webp"
-          loading="lazy" />
+          @load="heroLoaded = true" />
         <!-- Canva: 1440 x 640 || Image: 1100 x 550 -->
       </section>
 
       <!-- DETAIL OF THE PROJECT (2 COLUMNS) -->
       <section class="project-detail">
-        <div class="left-col border-block">
+        <div class="left-col border-block | animate-on-scroll">
           <h1 class="tp-2">{{ project.title }}</h1>
           <p class="tp-5">{{ project.summary }}</p>
 
@@ -117,7 +115,7 @@ useHead({
           </div>
         </div>
         <div class="right-col">
-          <div class="features" v-if="project.features">
+          <div class="features | animate-on-scroll" v-if="project.features">
             <h2 class="tp-3">Fonctionnalités principales :</h2>
             <ul v-if="project.features">
               <li class="tp-5" v-for="(feat, i) in project.features" :key="i">{{ feat }}</li>
@@ -127,8 +125,8 @@ useHead({
           <div
             v-if="project.detail"
             v-for="image in project.detail.previews"
-            class="project-preview">
-            <NuxtImg :src="image" :alt="project.title" format="webp" loading="lazy" />
+            class="project-preview | animate-on-scroll">
+            <img :src="image" :alt="project.title" />
             <!-- IMAGES: 750 x 370-->
           </div>
         </div>

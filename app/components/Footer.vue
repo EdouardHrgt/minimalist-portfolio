@@ -1,6 +1,7 @@
 <template>
   <footer>
     <div class="wrapper">
+    <Logo :isDark="false"/>
       <ul class="links">
         <li>
           <NuxtLink to="/" class="tp-7">Accueil</NuxtLink>
@@ -104,6 +105,7 @@ svg {
     display: flex;
     gap: var(--sp-100);
     padding: 0;
+    margin-left: 5rem;
   }
   .links li a {
     margin-bottom: 0;

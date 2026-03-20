@@ -13,15 +13,13 @@
   --slate-400: hsl(243, 10%, 64%);
   --slate-300: hsl(330, 3%, 84%);
 
-  --indigo-600: hsl(231, 64%, 58%);
-  --indigo-500: hsl(231, 70%, 60%);
-
   --blue-950: hsl(205, 41%, 21%);
+  --blue-400: hsl(205, 41%, 41%);
+  --blue-100: hsl(205, 41%, 50%);
   --teal-950: hsl(167, 36%, 25%);
   --teal-900: hsl(167, 36%, 40%);
   --teal-400: hsl(167, 36%, 54%);
   --teal-100: hsla(167, 36%, 54%, 0.3);
-  --skygv-400: hsl(193, 62%, 54%);
   --linen-50: hsl(9, 100%, 96%);
   --red-500: hsl(0, 90%, 57%);
 
@@ -58,6 +56,11 @@
   --bold: 700;
   --regular: 400;
   --thin: 300;
+}
+
+.page-wrapper {
+  position: relative;
+  overflow: hidden;
 }
 
 .tp-1 {
@@ -136,14 +139,20 @@
   border-top: 1px solid var(--slate-300);
   border-bottom: 1px solid var(--slate-300);
 }
-.gradient-text {
-  background: linear-gradient(90deg, var(--teal-900), var(--teal-400));
-
+.text-gradient {
+  background: linear-gradient(180deg, var(--blue-400), var(--blue-100));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   background-clip: text;
   color: transparent;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -179,6 +188,9 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  /* background-image: url('/images/3.jpg');
+  background-size: cover;
+  background-attachment: fixed; */
   background-color: var(--neutral-0);
   background: linear-gradient(
     135deg,
@@ -190,6 +202,12 @@ body {
   );
   /* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
   /* background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); */
+}
+
+.txt-gradient {
+  background: -webkit-linear-gradient(var(--teal-400), var(--teal-950));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* 6. Improve media defaults */

@@ -1,5 +1,5 @@
 <template>
-  <section class="contact">
+  <section class="contact | animate-on-scroll">
     <h3 class="tp-2">Travaillons ensemble !</h3>
     <span class="contact-line"></span>
 
