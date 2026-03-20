@@ -22,11 +22,11 @@ const nextProject = computed(() => {
 })
 
 const isVisible = ref(false)
-const slideDirection = ref('') // 'left' ou 'right'
+const slideDirection = ref('')
 
 const navigateTo = async (slug, direction) => {
   heroLoaded.value = false
-  window.scrollTo({ top: 0, behavior: 'instant' }) // ← scroll immédiat AVANT l'anim
+  window.scrollTo({ top: 0, behavior: 'instant' })
   slideDirection.value = direction
   isVisible.value = false
   await new Promise((resolve) => setTimeout(resolve, 300))
@@ -59,7 +59,7 @@ useSeoMeta({
 })
 
 useHead({
-  link: [{ rel: 'canonical', href: () => fullUrl.value }], // ← un seul useHead
+  link: [{ rel: 'canonical', href: () => fullUrl.value }],
   script: [
     {
       type: 'application/ld+json',

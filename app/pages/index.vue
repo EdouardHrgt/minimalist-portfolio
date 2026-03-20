@@ -171,7 +171,7 @@ h1 span {
     padding-top: var(--sp-150);
     text-align: center;
     padding-left: 0;
-    filter: drop-shadow(0px -5px 3px #b8b8b8);
+    filter: drop-shadow(0px -5px 3px #25252527);
   }
   .presentation-txt button {
     margin-inline: auto;

@@ -12,10 +12,10 @@ defineProps({
 p {
   font-size: 16px;
   font-family: 'Archivo Black', sans-serif;
-  color: var(--blue-950);
+  color: var(--slate-800);
   background-color: var(--neutral-50);
   padding: 10px 1.5rem;
-  border-radius: 12px 0 12px 0;
+  border-radius: 0 0 12px 0;
 }
 
 .dark {
