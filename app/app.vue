@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app-wrap">
     <Header />
     <NuxtRouteAnnouncer />
     <div class="page-wrapper">
@@ -50,6 +50,9 @@ onMounted(() => {
 </script>
 
 <style>
+.app-wrap {
+  overflow: hidden;
+}
 
 .page-enter-active,
 .page-leave-active {

@@ -2,12 +2,12 @@
   {
     "title": "Bookmark Manager",
     "slug": "bookmark-manager",
-    "summary": "Une application qui permet de sauvegarder les sites favoris de l'utilisateur, lui donnant la possibilité d'y ajouter des tags, de copier-coller l'URL automatiquement et de visiter le site. Il est possible de filtrer les favoris parmi toute la liste des tags (générée automatiquement) ou de rechercher un favori depuis la barre de recherche. Il est possible d'ajouter, de modifier, de supprimer un favori ainsi que de l'archiver.",
+    "summary": "Application web permettant à l’utilisateur d’enregistrer ses sites favoris. Elle offre la possibilité d’ajouter des tags, de capturer automatiquement l’URL (copier-coller) et d’accéder directement au site enregistré. Les favoris peuvent être filtrés via une liste de tags générée automatiquement ou retrouvés à l’aide d’une barre de recherche. L’utilisateur peut ajouter, modifier, supprimer ou archiver un favori.",
     "features": [
       "Thème Clair / Sombre.",
       "filtrage par tag / barre de recherche ou par ordre alphabetique.",
-      "Create / Update / Delete / Archived.",
-      "Animations sur les favoris.",
+      "Fonctions Create / Update / Delete / Archived.",
+      "Liste animée",
       "Génération de la liste des tags automatique."
     ],
     "preview": "/images/projects/portfolio-preview/bookmark-manager.png",
@@ -26,7 +26,7 @@
   {
     "title": "Finance App",
     "slug": "finance-app",
-    "summary": "Projet fullstack utilisant pour la première fois React. J’ai dû apprendre entièrement cette bibliothèque pour créer cette application bancaire personnelle fictive. J’ai ajouté un délai aux requêtes afin de permettre aux utilisateurs de voir l’animation de chargement pendant la récupération des données. J’ai créé une fonction Fetch personnalisée qui gère également les états (loading / error / données).",
+    "summary": "Application bancaire développée en fullstack, marquant une première utilisation de React. Ce projet a nécessité un apprentissage complet de cet outil afin de concevoir une application personnelle. Un délai a été volontairement ajouté aux requêtes pour permettre l’affichage d’une animation de chargement lors de la récupération des données. Une fonction Fetch personnalisée a également été mise en place afin de gérer les différents états de l’application (chargement, erreur, données).",
     "features": [
       "Génération automatique du graphique 'camenbert'.",
       "Menu lattéral reductible.",
@@ -49,7 +49,7 @@
   {
     "title": "Weather App",
     "slug": "weather-app",
-    "summary": "Site web Météorologique par ville recherchée (International). Affichage des données importantes ainsi que les prévisions horaires / journalières. Convertion système métrique / impérial automatique.",
+    "summary": "Site web Météorologique par ville recherchée. Affichage des données importantes ainsi que les prévisions horaires / journalières. Convertion système métrique / impérial automatique. Codé en vanilla Javascript.",
     "features": [
       "Contact API externes 'geocoding-api'",
       "Affichage température et icone associée.",
@@ -74,7 +74,7 @@
   {
     "title": "Vermintide 2",
     "slug": "vermintide-2",
-    "summary": "Appli crée pour la communauté du jeu vidéo 'Vermintide 2', regroupant toutes les informations sur les personnages et leurs armes pour chaque type de mod.",
+    "summary": "Appli crée pour la communauté du jeu vidéo 'Vermintide 2' regroupant toutes les informations sur les personnages et leurs armes pour chaque version des mods d'équilibrage.",
     "preview": "/images/projects/portfolio-preview/vermintide.png",
     "features": [
       "choix du personnage et d'un mod.",
@@ -97,7 +97,7 @@
   {
     "title": "MyTeam",
     "slug": "myteam",
-    "summary": "Site de recrutement au design très riche et complexe. Enormément d'assets ont du être placés minutieusement et ce dans toutes les versions responsives pour PC / Tablette / Mobile.",
+    "summary": "Site de recrutement au design complexe. De nombreux éléments graphiques (assets) ont été intégrés avec précision, en veillant à leur bonne adaptation sur toutes les versions responsives (ordinateur, tablette et mobile).",
     "features": [
       "Formulaire avec vérification des champs.",
       "Design Riche et complexe.",
@@ -119,7 +119,7 @@
   {
     "title": "Ip Address Tracker",
     "slug": "ip-address-tracker",
-    "summary": "Appli permetant de chercher un lieux via une adresse IP. Affichage Dynamique de l'adresse sur une carte internationnale. Possibilité de naviguer sur la carte et de Zoomer / Dézoomer. Tout cela est possible grâce à l'api externe 'geo.ipify.org'.",
+    "summary": "Application permettant de localiser un lieu à partir d’une adresse IP. L’adresse est affichée dynamiquement sur une carte interactive à l’échelle internationale. L’utilisateur peut naviguer sur la carte ainsi que zoomer et dézoomer. Ces fonctionnalités reposent sur l’utilisation de l’API externe geo.ipify.org.",
     "features": ["Recherche d'un lieu via son adresse IP.", "Intéraction avec la carte."],
     "preview": "/images/projects/portfolio-preview/ip-address-tracker.webp",
     "detail": {
@@ -137,7 +137,7 @@
   {
     "title": "Audiophile",
     "slug": "audiophile",
-    "summary": "Site E-commerce d'une boutique de produits HI-FI (Casques, Hauts-parleurs, Ecouteurs...). Composé de 4 pages ainsi que le panier client, le récapitulatif et le formulaire de paiement.",
+    "summary": "Site e-commerce dédié à la vente de produits hi-fi (casques, haut-parleurs, écouteurs, etc.). Il comprend quatre pages principales, ainsi qu’un parcours d’achat complet incluant le panier, une page de récapitulatif et un formulaire de paiement.",
     "features": [
       "Ajout / Retrait de produit dans le panier.",
       "Récapitulatif commande.",
@@ -160,7 +160,7 @@
   {
     "title": "Photosnap",
     "slug": "photosnap",
-    "summary": "Galerie de photo d'un photographe professionnel composé de 4 pages (Accueil / Histoire / Services / Prix).",
+    "summary": "Photosnap est une galerie dédiée à un photographe professionnel, composée de quatre pages : Accueil, Histoire, Services et Tarifs.",
     "preview": "/images/projects/portfolio-preview/photosnap.png",
     "detail": {
       "hero": "/images/projects/hero/photosnap-main.jpg",
@@ -177,7 +177,7 @@
   {
     "title": "Designo",
     "slug": "designo",
-    "summary": "Site web de l'agence créative Designo. 4 pages: Accueil / Agence / Adresses / Contact. Le formulaire est Fonctionnel avec traitement des champs par REGEXP.",
+    "summary": "Site web de l’agence créative Designo, composé de quatre pages : Accueil, Agence, Adresses et Contact. Le formulaire de contact est fonctionnel et intègre une validation des champs via des expressions régulières (RegExp).",
 
     "preview": "/images/projects/portfolio-preview/designo.png",
     "detail": {

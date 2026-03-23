@@ -21,14 +21,16 @@
       <div class="about-txt">
         <h2 class="tp-2">Qui suis-je ?</h2>
         <p class="tp-4">
-          Je suis un développeur front-end à la recherche d’un nouveau poste dans une entreprise
-          stimulante. Je me concentre sur l’écriture d’un HTML accessible, l’utilisation de
-          pratiques CSS modernes et la rédaction d’un JavaScript propre et maintenable. Lorsque
-          j’écris du code JavaScript, j’utilise principalement Vue.js / Nuxt, mais je peux m’adapter
-          aux outils nécessaires. Je suis basé à Lille, en France, mais je suis tout à fait à l’aise
-          avec le travail à distance et j’ai de l’expérience dans des équipes en remote.<br />Quand
-          je ne code pas, vous me trouverez à faire de la musique ou des sorties en vélo. N’hésitez
-          pas à jeter un œil à mon travail.
+          Développeur web orienté front-end et chef de projet, je suis à la recherche d’un
+          environnement stimulant pour mettre à profit mes compétences techniques et
+          organisationnelles.
+          <br />
+          Mes capacités d’organisation, de communication et d’adaptation me permettent d’être à la
+          fois efficace sur les aspects techniques et à l’aise dans les interactions humaines, que
+          ce soit avec les équipes ou les parties prenantes.
+          <br />
+          Basé à Lille, je reste ouvert aux opportunités dans d'autres villes. En dehors du
+          développement, je consacre du temps à la musique (guitare), la cuisine et le cyclisme.
         </p>
         <NuxtLink to="/portfolio"><Button label="Voir mon Portfolio" :primary="false" /></NuxtLink>
       </div>

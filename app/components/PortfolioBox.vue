@@ -59,6 +59,11 @@ article {
 
 .description p {
   margin-block: var(--sp-200);
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* nombre de lignes visibles */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 1120px) {
