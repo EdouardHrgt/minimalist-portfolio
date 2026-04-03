@@ -2,10 +2,7 @@
   <section class="contact | animate-on-scroll">
     <h3 class="tp-2">Travaillons ensemble !</h3>
     <span class="contact-line"></span>
-
-    <NuxtLink to="/contact"
-      ><Button label="me contacter" :primary="false" @click="toContact"
-    /></NuxtLink>
+    <Button label="me contacter" :primary="false" to="/contact" />
   </section>
 </template>
 

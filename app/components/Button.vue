@@ -1,5 +1,17 @@
 <template>
-  <button v-if="label && primary" class="btn-primary tp-7 flex-align" @click="handleClick">
+  <!-- Variante NuxtLink (prop `to`) -->
+  <NuxtLink v-if="to && primary" :to="to" class="btn-primary tp-7 flex-align">
+    <div class="btn-icon">
+      <img src="/images/icons/down-arrows.svg" alt="An icon of arrows pointing down side" />
+    </div>
+    <p class="tp-7">{{ label }}</p>
+  </NuxtLink>
+  <NuxtLink v-else-if="to && !primary" :to="to" class="btn-secondary tp-7">
+    {{ label }}
+  </NuxtLink>
+
+  <!-- Variante button (comportement existant) -->
+  <button v-else-if="label && primary" class="btn-primary tp-7 flex-align" @click="handleClick">
     <div class="btn-icon">
       <img src="/images/icons/down-arrows.svg" alt="An icon of arrows pointing down side" />
     </div>
@@ -17,6 +29,7 @@ const props = defineProps({
   primary: Boolean,
   goTo: String,
   file: String,
+  to: String, // 👈 route interne → rend un NuxtLink
 })
 
 function handleClick() {
@@ -53,11 +66,11 @@ button {
 }
 
 .btn-default {
- border: none;
- background-color: none;
- color: var(--teal-400);
- font-style: italic;
- text-transform: capitalize;
+  border: none;
+  background-color: none;
+  color: var(--teal-400);
+  font-style: italic;
+  text-transform: capitalize;
 }
 
 .btn-icon {
@@ -68,8 +81,18 @@ button {
   transition: background-color 0.4s;
 }
 
-img {
+a {
+  height: 48px;
+  width: 200px;
+  transition: background-color 0.4s;
+  text-transform: uppercase;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
+
 
 @media (hover: hover) {
   .btn-primary:hover {
@@ -82,12 +105,5 @@ img {
     background-color: var(--slate-800);
     color: var(--neutral-0);
   }
-}
-
-@media (max-width: 1440px) {
-}
-@media (max-width: 1024px) {
-}
-@media (max-width: 768px) {
 }
 </style>

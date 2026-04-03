@@ -344,6 +344,26 @@ useHead({
   .project-header {
     margin-bottom: var(--sp-300);
   }
+  .carousel {
+    gap: 0.5rem;
+  }
+  .carousel-txt h3 {
+    font-size: 18px;
+  }
+  .carousel-txt-p {
+    font-size: 16px;
+  }
+  .carousel > div {
+    gap: var(--sp-100);
+    text-align: center;
+    width: 100%;
+  }
+  .previous {
+    flex-direction: column;
+  }
+  .next {
+    flex-direction: column-reverse;
+  }
 }
 
 @media (hover: hover) {

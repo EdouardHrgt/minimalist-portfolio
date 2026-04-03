@@ -21,31 +21,33 @@
       <div class="about-txt">
         <h2 class="tp-2">Qui suis-je ?</h2>
         <p class="tp-4">
-          Développeur web orienté front-end et chef de projet, je suis à la recherche d’un
-          environnement stimulant pour mettre à profit mes compétences techniques et
-          organisationnelles.
+          <strong>Développeur web</strong> spécialisé Frontend, je combine expertise technique et
+          compétences en gestion de projet.
           <br />
-          Mes capacités d’organisation, de communication et d’adaptation me permettent d’être à la
-          fois efficace sur les aspects techniques et à l’aise dans les interactions humaines, que
-          ce soit avec les équipes ou les parties prenantes.
+          Mon parcours d’<strong>entrepreneur</strong> m’a permis de développer une forte
+          polyvalence, me permettant d’intervenir aussi bien sur le développement que sur la
+          coordination des équipes.
           <br />
-          Basé à Lille, je reste ouvert aux opportunités dans d'autres villes. En dehors du
-          développement, je consacre du temps à la musique (guitare), la cuisine et le cyclisme.
+          Organisé et rigoureux, j’évolue efficacement dans des environnements collaboratifs mêlant
+          profils techniques et créatifs. Habitué aux <strong>méthodes Agile</strong> orientées
+          feature-driven, je veille à livrer des solutions performantes, cohérentes et alignées avec
+          les objectifs métiers.
         </p>
-        <NuxtLink to="/portfolio"><Button label="Voir mon Portfolio" :primary="false" /></NuxtLink>
+        <Button label="Voir mon Portfolio" :primary="false" to="/portfolio" />
       </div>
     </section>
+    <Process />
     <ContactMe />
   </main>
 </template>
 
 <script setup>
 useSeoMeta({
-  title: 'Edouard Herrengt — Développeur Frontend Vue / Nuxt',
+  title: 'Edouard Herrengt — Développeur Frontend',
   description:
-    'Portfolio de Edouard Herrengt, développeur frontend spécialisé Vue.js et Nuxt, basé à Lille.',
+    'Portfolio de Edouard Herrengt, développeur frontend et chef de projet, basé à Lille.',
   ogTitle: 'Edouard Herrengt — Développeur Frontend',
-  ogDescription: 'Découvrez mes projets Vue / Nuxt...',
+  ogDescription: 'Découvrez mes projets Web',
   ogImage: '/og-image.jpg',
   ogUrl: 'https://edouard-herrengt.com/',
   twitterCard: 'summary_large_image',
@@ -96,10 +98,15 @@ h1 span {
 .about-me {
   gap: calc(var(--sp-500) * 2);
   display: flex;
+  background-image: url('/images/homepage/desktop/pattern-rings.svg');
+  background-position: right center;
+  background-repeat: no-repeat;
 }
 
 .photo {
   width: 540px;
+  position: relative;
+  isolation: isolate;
 }
 
 .photo img {
@@ -117,6 +124,10 @@ h1 span {
   margin-block: var(--sp-200);
 }
 
+.about-txt p strong {
+  color: var(--blue-950);
+}
+
 @media (max-width: 1472px) {
   .presentation,
   .about-me,
@@ -128,6 +139,7 @@ h1 span {
 @media (max-width: 1150px) {
   .about-me {
     gap: var(--sp-500);
+    background-image: none;
   }
   .contact {
     gap: var(--sp-100);

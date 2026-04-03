@@ -42,7 +42,8 @@
 <style scoped>
 footer {
   background-color: var(--slate-800);
-  padding-block: var(--sp-300);
+  padding-block: var(--sp-400);
+  position: relative;
 }
 
 .wrapper {
@@ -74,6 +75,20 @@ footer {
   transition: color 0.3s ease-out;
 }
 
+.copy {
+  color: var(--neutral-0);
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.6;
+}
+
+.copy span {
+  color: var(--teal-400);
+}
+
 @media (hover: hover) {
   .socials svg:hover {
     fill: var(--teal-400);
@@ -100,12 +115,14 @@ footer {
   .socials {
     flex-direction: column;
     margin-top: var(--sp-150);
-    gap: 1rem;    position: relative;
+    gap: 1rem;
+    position: relative;
     top: 7px;
   }
   .links {
     gap: 14px;
     flex-direction: column;
+    padding: 0;
   }
 }
 </style>
